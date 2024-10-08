@@ -6,5 +6,9 @@ ll:
       ansible_connection: local
 prod:
   hosts:
-    srv-apache-1:
-      ansible_host: 10.100.2.186
+    srv-lb1:
+      ansible_host: 10.100.2.48
+    srv-web1:
+      ansible_host: 10.100.2.180
+    srv-web2:
+      ansible_host: 10.100.2.48
