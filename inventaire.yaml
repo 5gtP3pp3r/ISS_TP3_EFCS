@@ -1,4 +1,4 @@
-ll:
+all:
   vars:
     ansible_ssh_commom_args: '-o StrictHostKeyChecking=no'
   hosts:
