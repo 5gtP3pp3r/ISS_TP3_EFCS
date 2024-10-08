@@ -4,10 +4,12 @@ all:
   hosts:
     control:
       ansible_connection: local
-prod:
+loadbalancer:
   hosts:
     srv-lb1:
       ansible_host: 10.100.2.47
+webservers:
+  hosts:
     srv-web1:
       ansible_host: 10.100.2.180
     srv-web2:
