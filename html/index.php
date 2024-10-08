@@ -1,5 +1,5 @@
 <h1>Je te test!</h1>
-<h4>Tentative de connexion Mysql depuis PHP...</h4>
+<h4>Tentative de connexion à MySQL depuis PHP...</h4>
 
 <?php
 $host = 'mysql';
@@ -10,5 +10,5 @@ $conn = new mysqli($host, $user, $pass);
 if ($conn->connect_error) {
     die ("La connection a échoué: " . $conn->connect_error);
 }
-echo "Connexion réussi à MariaDB!";
+echo "Connexion réussi à MySQL!";
 ?
