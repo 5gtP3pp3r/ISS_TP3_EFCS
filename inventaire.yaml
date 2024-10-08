@@ -7,7 +7,7 @@ all:
 prod:
   hosts:
     srv-lb1:
-      ansible_host: 10.100.2.48
+      ansible_host: 10.100.2.47
     srv-web1:
       ansible_host: 10.100.2.180
     srv-web2:
