@@ -1,4 +1,4 @@
-- name: "Instalation structure loadbalancer avec deux erveurs "
+- name: "Instalation structure loadbalancer avec deux serveurs "
   hosts: loadbalancer
   become: true
   vars_files:
@@ -18,3 +18,18 @@
           - "80:80"
         volumes:
           - ./NginxConf/default.conf:/usr/share/nginx/conf.d/default.conf:ro
+  hosts: webservers
+  become: true
+  vars_files:
+    - ./vars/secret-variables.yaml
+  pre_tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+        update_cache: yes
+  tasks:
+    - name: Create Nginx Container
+      community.docker.docker_container:
+        name: srv-web
+
