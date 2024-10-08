@@ -1,0 +1,20 @@
+- name: "Instalation structure loadbalancer avec deux erveurs "
+  hosts: loadbalancer
+  become: true
+  vars_files:
+    - ./vars/secret-variables.yaml
+  pre_tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+        update_cache: yes
+  tasks:
+    - name: Create Nginx Container
+      community.docker.docker_container:
+        name: srv-lb1-proxy
+        image: nginx:alpine
+        ports:
+          - "80:80"
+        volumes:
+          - ./NginxConf/default.conf:/usr/share/nginx/conf.d/default.conf:ro
