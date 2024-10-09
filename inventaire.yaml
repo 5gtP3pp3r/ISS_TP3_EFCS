@@ -1,10 +1,7 @@
 all:
   vars:
     ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
-  hosts:
-    control:
-      ansible_connection: local
-loadbalancer:
+lbserveur:
   hosts:
     srv-lb1:
       ansible_host: 10.100.2.47
