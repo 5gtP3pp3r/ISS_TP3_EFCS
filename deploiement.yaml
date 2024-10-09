@@ -71,6 +71,7 @@
           - "80:80"
         volumes:
           - ./html:/usr/local/apache2/htdocs
+         -  ./HttpdConf/httpd.conf:/usr/local/apache2/conf/httpd.conf
         networks:
           - frontend
           - backend
