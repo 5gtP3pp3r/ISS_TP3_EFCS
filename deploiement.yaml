@@ -5,10 +5,10 @@
     - ./vars/secret-variables.yaml
   pre_tasks:
     - name: Install Docker
-      apt:
+      ansible.builtin.apt:
         name: docker.io
         state: present
-        update_cache: yes
+        update_cache: true
 
   tasks:
 
@@ -28,10 +28,10 @@
     - ./vars/secret-variables.yaml
   pre_tasks:
     - name: Install Docker
-      apt:
+      ansible.builtin.apt:
         name: docker.io
         state: present
-        update_cache: yes
+        update_cache: true
 
     - name: Create Frontend Network
       community.docker.docker_network:
@@ -49,17 +49,10 @@
 
   tasks:
 
-    - name: Build PHP-FPM Docker Image
-      community.docker.docker_image:
-        name: php-fpm-custom
-        build:
-          path: ./
-          dockerfile: Dockerfile
-
     - name: Create PHP-FPM Container
       community.docker.docker_container:
         name: php-container
-        image: php-fpm-custom
+        image: php:fpm-alpine
         ports:
           - "9000:9000"
         volumes:

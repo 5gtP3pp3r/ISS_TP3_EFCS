@@ -11,9 +11,9 @@ webservers:
       ansible_host: 10.100.2.180
     srv-web2:
       ansible_host: 10.100.2.48
-prod:
-  children:
-    lbservers:
-    webservers:
-  vars:
-    env: production # Pas sur de celle là et de son utilité
+#prod:
+#  children:
+#    lbservers:
+#    webservers:
+#  vars:
+#    env: production # Pas sur de celle là et de son utilité
