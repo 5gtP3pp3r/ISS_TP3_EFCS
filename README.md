@@ -1,1 +1,1 @@
-# Épreuve synthèse à caractère final
+# Épreuve finale à caractère synthèse
