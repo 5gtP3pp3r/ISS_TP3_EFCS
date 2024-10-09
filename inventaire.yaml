@@ -1,7 +1,7 @@
 all:
   vars:
     ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
-lbserveur:
+lbservers:
   hosts:
     srv-lb1:
       ansible_host: 10.100.2.47
@@ -13,5 +13,7 @@ webservers:
       ansible_host: 10.100.2.48
 prod:
   children:
-    lbserver:
+    lbservers:
     webservers:
+  vars:
+    env: production # Pas sur de celle là et de son utilité
