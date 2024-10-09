@@ -34,18 +34,18 @@
         update_cache: yes
 
     - name: Create Frontend Network
-    community.docker.docker_network:
-      name: frontend
-      state: present
+      community.docker.docker_network:
+        name: frontend
+        state: present
 
     - name: Create Backend Network
-    community.docker.docker_network:
-      name: backend
-      state: present
+      community.docker.docker_network:
+        name: backend
+        state: present
 
     - name: Create Persistent MySQL Volume
-    community.docker.docker_volume:
-      name: mysql_data
+      community.docker.docker_volume:
+        name: mysql_data
 
   tasks:
 
