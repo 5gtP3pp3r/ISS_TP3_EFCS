@@ -85,9 +85,9 @@
           - "3306:3306"
         volumes:
           - mysql_data:/var/lib/mysql
-        environment:
+        env:
           MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATBASE: mydatabase
+          MYSQL_DATABASE: mydatabase
           MYSQL_USER: admin
           MYSQL_PASSWORD: CegepSt&Foy
         networks:
