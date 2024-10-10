@@ -9,7 +9,42 @@ Le site n'est pas fonctionnel, mais tout le travail pertinant est présent et co
 
 
 
-référence visuelles pour la video:
+références visuelles pour la video:
+
+```php
+<h1>Je te test!</h1>
+<h4>Tentative d'affichage des ip du conteneur PHP-FPM et de la VM!</h4>
+
+<?php
+// Afficher l'adresse IP du conteneur
+echo "L'adresse IP du conteneur est : " . $_SERVER['SERVER_ADDR'] . "<br>";
+
+// Afficher l'adresse IP externe de la VM
+$ipExterne = file_get_contents('http://ipecho.net/plain');
+echo "L'adresse IP externe de la VM est : " . $ipExterne;
+?>
+```
+
+```json
+upstream monsite-servers {
+        server srv-web1 max_fails=2;
+        server srv-web2 max_fails=2;
+}
+server {
+    listen      80;
+    listen [::]:80;
+    server_name www.efcs.com;
+
+    location / {
+        proxy_pass         http://monsite-servers;
+        proxy_redirect     off;
+        proxy_set_header   Host $host;
+        proxy_set_header   X-Real-IP $remote_addr;
+        proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header   X-Forwarded-Host $server_name;
+    }
+}
+```
 
 ```yaml
 [defaults]
