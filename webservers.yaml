@@ -61,6 +61,7 @@
           - "9000:9000"
         networks:
           - backend
+        status: present
 
     - name: Create Apache Container
       community.docker.docker_container:
