@@ -1,0 +1,37 @@
+- name: "Installation loadbalancer Nginx "
+  hosts: lbservers
+  become: true
+  vars_files:
+    - ./vars/secret-variables.yaml
+  pre_tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+        update_cache: true
+
+  tasks:
+
+    - name: Create Directory
+      ansible.builtin.file:
+        path: /home/admin/NginxConf
+        state: directory
+        owner: admin
+        group: admin
+        mode: 0755
+
+    - name: Upload default.conf
+      copy:
+        src: ./NginxConf/default.conf
+        dest: /home/admin/NginxConf/default.conf
+        mode: 0755
+
+    - name: Create Nginx Container
+      community.docker.docker_container:
+        name: srv-lb1-proxy
+        image: nginx:alpine
+        ports:
+          - "80:80"
+        volumes:
+          - /home/admin/NginxConf/default.conf:/usr/share/nginx/conf.d/default.conf:ro
+        state: present

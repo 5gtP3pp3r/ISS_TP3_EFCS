@@ -1,7 +1,6 @@
-all:
-  vars:
-    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
-
+#all:
+#  vars:
+#    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
 lbservers:
   hosts:
     srv-lb1:
@@ -16,5 +15,6 @@ prod:
   children:
     lbservers:
     webservers:
-#  vars:
+  vars:
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
 #    env: production # Pas sur de celle là et de son utilité
