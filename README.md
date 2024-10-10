@@ -10,6 +10,7 @@ Le site n'est pas fonctionnel, mais tout le travail pertinant est présent et co
 
 
 ### lien youtube privé pour la vidéo:
+à noter la vidéo n'est plus "up to date". J'ai apporté des corrections dans mes fichiers .conf et yaml. Mes conteneurs se déploient mais le site ne fonctionne pas (load balancer)
 
 https://youtu.be/zTlj_FELL7Y
 
@@ -34,7 +35,7 @@ echo "L'adresse IP externe de la VM est : " . $ipExterne;
  - default.conf
 ```terminal
 
-upstream srv-lb1-servers {
+upstream srv-lb1-proxy-servers {
         server srv-web1 max_fails=2;
         server srv-web2 max_fails=2;
 }
@@ -44,7 +45,7 @@ server {
     server_name www.efcs.com;
 
     location / {
-        proxy_pass         http://srv-lb1-servers;
+        proxy_pass         http://www.efcs.com-servers;
         proxy_redirect     off;
         proxy_set_header   Host $host;
         proxy_set_header   X-Real-IP $remote_addr;
@@ -114,6 +115,11 @@ prod:
 
   tasks:
 
+    - name: Create Frontend Network
+      community.docker.docker_network:
+        name: frontend
+        state: started
+
     - name: Create Directory
       ansible.builtin.file:
         path: /home/admin/NginxConf
@@ -136,7 +142,7 @@ prod:
           - "80:80"
         volumes:
           - /home/admin/NginxConf/default.conf:/usr/share/nginx/conf.d/default.conf:ro
-        state: present
+        state: started
 
 ```
  - web.yaml
@@ -155,11 +161,6 @@ prod:
         update_cache: true
 
   tasks:
-
-    - name: Create Frontend Network
-      community.docker.docker_network:
-        name: frontend
-        state: present
 
     - name: Create Backend Network
       community.docker.docker_network:
@@ -204,8 +205,8 @@ prod:
         ports:
           - "9000:9000"
         networks:
-          - backend
-        status: present
+          - names: backend
+        state: started
 
     - name: Create Apache Container
       community.docker.docker_container:
@@ -217,9 +218,9 @@ prod:
           - /home/admin/html/index.php:/usr/local/apache2/htdocs/index.php
           - /home/admin/HttpdConf/httpd.conf:/usr/local/apache2/conf/httpd.conf
         networks:
-          - frontend
-          - backend
-        state: present
+          - name: frontend
+          - name: backend
+        state: started
 
     - name: Create MySQL Container
       community.docker.docker_container:
@@ -229,11 +230,14 @@ prod:
           - "3306:3306"
         volumes:
           - mysql_data:/var/lib/mysql
-        environment:
-          MYSQL_ROOT_PASSWORD: rootpassword
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: mydatabase
+          MYSQL_USER: admin
+          MYSQL_PASSWORD: CegepSt&Foy
         networks:
-          - backend
-        state: present
+          - name: backend
+        state: started
 
 ```
 
