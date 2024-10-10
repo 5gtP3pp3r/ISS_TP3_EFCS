@@ -11,6 +11,7 @@ Le site n'est pas fonctionnel, mais tout le travail pertinant est présent et co
 
 références visuelles pour la video:
 
+ - index.php
 ```php
 
 <h1>Je te test!</h1>
@@ -26,7 +27,7 @@ echo "L'adresse IP externe de la VM est : " . $ipExterne;
 ?>
 
 ```
-
+ - default.conf
 ```terminal
 
 upstream srv-lb1-servers {
@@ -49,7 +50,7 @@ server {
 }
 
 ```
-
+ - ansible.cfg
 ```yaml
 
 [defaults]
@@ -59,7 +60,7 @@ retry_files_enabled = False
 log_path = ./.traces_d_ansible
 
 ```
-
+- inventaire.yaml
 ```yaml
                            
 all:
@@ -83,7 +84,7 @@ prod:
 #    env: production # Pas sur de celle là et de son utilité
 
 ```
-
+ - deploiement.yaml
 ```yaml
 
 - name: Configure LoadBalancer
@@ -92,7 +93,7 @@ prod:
   ansible.builtin.import_playbook: web.yaml
 
 ```
-
+ - loadbalancer.yaml
 ```yaml
 
 - name: "Installation loadbalancer Nginx "
@@ -134,7 +135,7 @@ prod:
         state: present
 
 ```
-
+ - web.yaml
 ```yaml
 
 - name: "Installation servers srv-web1, web2"
