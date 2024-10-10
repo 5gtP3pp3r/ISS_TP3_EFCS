@@ -9,7 +9,8 @@ Le site n'est pas fonctionnel, mais tout le travail pertinant est présent et co
 
 
 
-###lien youtube privé pour la vidéo:
+### lien youtube privé pour la vidéo:
+
 https://youtu.be/zTlj_FELL7Y
 
 références visuelles pour la video:
