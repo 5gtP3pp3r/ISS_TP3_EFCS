@@ -12,6 +12,11 @@
 
   tasks:
 
+    - name: Create Frontend Network
+      community.docker.docker_network:
+        name: frontend
+        state: present
+
     - name: Create Directory
       ansible.builtin.file:
         path: /home/admin/NginxConf
@@ -33,5 +38,5 @@
         ports:
           - "80:80"
         volumes:
-          - /home/admin/NginxConf/default.conf:/usr/share/nginx/conf.d/default.conf:ro
+          - /home/admin/NginxConf/:/usr/share/nginx/conf.d:ro
         state: started

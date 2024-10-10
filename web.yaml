@@ -12,11 +12,6 @@
 
   tasks:
 
-    - name: Create Frontend Network
-      community.docker.docker_network:
-        name: frontend
-        state: present
-
     - name: Create Backend Network
       community.docker.docker_network:
         name: backend
@@ -70,8 +65,8 @@
         ports:
           - "80:80"
         volumes:
-          - /home/admin/html/index.php:/usr/local/apache2/htdocs/index.php
-          - /home/admin/HttpdConf/httpd.conf:/usr/local/apache2/conf/httpd.conf
+          - /home/admin/html/:/usr/local/apache2/htdocs/
+          - /home/admin/HttpdConf/:/usr/local/apache2/conf:ro
         networks:
           - name: frontend
           - name: backend
