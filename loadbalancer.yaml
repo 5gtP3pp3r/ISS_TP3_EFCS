@@ -34,4 +34,4 @@
           - "80:80"
         volumes:
           - /home/admin/NginxConf/default.conf:/usr/share/nginx/conf.d/default.conf:ro
-        state: present
+        state: started
