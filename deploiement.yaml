@@ -12,6 +12,11 @@
 
   tasks:
 
+    - name: Upload httpd.conf
+      copy:
+        src: ./NginxConf/default.conf
+        dest: /home/admin/NginxConf/default.conf
+
     - name: Create Nginx Container
       community.docker.docker_container:
         name: srv-lb1-proxy
@@ -48,6 +53,16 @@
     - name: Create Persistent MySQL Volume
       community.docker.docker_volume:
         name: mysql_data
+
+    - name: Uploade index.php
+      copy:
+        src: ./html/index.php
+        dest: /home/admin/html/index.php
+
+    - name: Upload httpd.conf
+      copy:
+        src: ./HttpdConf/httpd.conf
+        dest: /home/admin/HttpdConf/httpd.conf
 
     - name: Create PHP-FPM Container
       community.docker.docker_container:
