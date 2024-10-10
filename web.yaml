@@ -86,7 +86,10 @@
         volumes:
           - mysql_data:/var/lib/mysql
         environment:
-          MYSQL_ROOT_PASSWORD: rootpassword
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATBASE: mydatabase
+          MYSQL_USER: admin
+          MYSQL_PASSWORD: CegepSt&Foy
         networks:
           - name: backend
         state: started
