@@ -5,7 +5,7 @@
     - ./vars/secret-variables.yaml
   pre_tasks:
     - name: Install Docker
-      ansible.builtin.apt:
+      apt:
         name: docker.io
         state: present
         update_cache: true
@@ -28,10 +28,12 @@
     - ./vars/secret-variables.yaml
   pre_tasks:
     - name: Install Docker
-      ansible.builtin.apt:
+      apt:
         name: docker.io
         state: present
         update_cache: true
+
+  tasks:
 
     - name: Create Frontend Network
       community.docker.docker_network:
@@ -47,8 +49,6 @@
       community.docker.docker_volume:
         name: mysql_data
 
-  tasks:
-
     - name: Create PHP-FPM Container
       community.docker.docker_container:
         name: php-container
@@ -57,6 +57,7 @@
           - "9000:9000"
         volumes:
           - ./html:/srv/htdocs
+        state: started
         networks:
           - backend
 
@@ -69,6 +70,7 @@
         volumes:
           - ./html:/usr/local/apache2/htdocs
           - ./HttpdConf/httpd.conf:/usr/local/apache2/conf/httpd.conf
+        state: started
         networks:
           - frontend
           - backend
@@ -81,7 +83,8 @@
           - "3306:3306"
         volumes:
           - mysql_data:/var/lib/mysql
-        environement:
-          - MYSQL_ROOT_PASSWORD=rootpassword
+        environment:
+          MYSQL_ROOT_PASSWORD: rootpassword
+        state: started
         networks:
           - backend

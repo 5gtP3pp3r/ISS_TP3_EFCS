@@ -250,3 +250,323 @@ The offending line appears to be:
     "containers.podman.podman_unshare": "Run tasks using podman unshare"
 }
 2024-10-09 17:11:40,004 p=4800 u=admin n=ansiblelint | Listing 4 violation(s) that are fatal
+2024-10-09 17:19:26,579 p=4956 u=admin n=ansible | {"/usr/lib/python3/dist-packages/ansible_collections": {"amazon.aws": {"version": "8.2.1"}, "ansible.netcommon": {"version": "6.1.3"}, "ansible.posix": {"version": "1.5.4"}, "ansible.utils": {"version": "4.1.0"}, "ansible.windows": {"version": "2.5.0"}, "arista.eos": {"version": "9.0.0"}, "awx.awx": {"version": "24.6.1"}, "azure.azcollection": {"version": "2.7.0"}, "check_point.mgmt": {"version": "5.2.3"}, "chocolatey.chocolatey": {"version": "1.5.1"}, "cisco.aci": {"version": "2.10.1"}, "cisco.asa": {"version": "5.0.1"}, "cisco.dnac": {"version": "6.18.0"}, "cisco.intersight": {"version": "2.0.17"}, "cisco.ios": {"version": "8.0.0"}, "cisco.iosxr": {"version": "9.0.0"}, "cisco.ise": {"version": "2.9.3"}, "cisco.meraki": {"version": "2.18.1"}, "cisco.mso": {"version": "2.9.0"}, "cisco.nxos": {"version": "8.1.0"}, "cisco.ucs": {"version": "1.11.0"}, "cloud.common": {"version": "3.0.0"}, "cloudscale_ch.cloud": {"version": "2.4.0"}, "community.aws": {"version": "8.0.0"}, "community.ciscosmb": {"version": "1.0.9"}, "community.crypto": {"version": "2.22.0"}, "community.digitalocean": {"version": "1.27.0"}, "community.dns": {"version": "3.0.4"}, "community.docker": {"version": "3.12.1"}, "community.general": {"version": "9.4.0"}, "community.grafana": {"version": "1.9.1"}, "community.hashi_vault": {"version": "6.2.0"}, "community.hrobot": {"version": "2.0.1"}, "community.library_inventory_filtering_v1": {"version": "1.0.1"}, "community.libvirt": {"version": "1.3.0"}, "community.mongodb": {"version": "1.7.6"}, "community.mysql": {"version": "3.10.3"}, "community.network": {"version": "5.0.3"}, "community.okd": {"version": "3.0.1"}, "community.postgresql": {"version": "3.5.0"}, "community.proxysql": {"version": "1.6.0"}, "community.rabbitmq": {"version": "1.3.0"}, "community.routeros": {"version": "2.19.0"}, "community.sap_libs": {"version": "1.4.2"}, "community.sops": {"version": "1.9.0"}, "community.vmware": {"version": "4.7.0"}, "community.windows": {"version": "2.3.0"}, "community.zabbix": {"version": "2.5.1"}, "containers.podman": {"version": "1.15.4"}, "cyberark.conjur": {"version": "1.3.0"}, "cyberark.pas": {"version": "1.0.27"}, "dellemc.enterprise_sonic": {"version": "2.5.0"}, "dellemc.openmanage": {"version": "9.6.0"}, "dellemc.powerflex": {"version": "2.5.0"}, "dellemc.unity": {"version": "2.0.0"}, "f5networks.f5_modules": {"version": "1.30.1"}, "fortinet.fortimanager": {"version": "2.7.0"}, "fortinet.fortios": {"version": "2.3.7"}, "frr.frr": {"version": "2.0.2"}, "google.cloud": {"version": "1.4.1"}, "grafana.grafana": {"version": "5.5.0"}, "hetzner.hcloud": {"version": "3.1.1"}, "ibm.qradar": {"version": "3.0.0"}, "ibm.spectrum_virtualize": {"version": "2.0.0"}, "ibm.storage_virtualize": {"version": "2.4.1"}, "ieisystem.inmanage": {"version": "2.0.0"}, "infinidat.infinibox": {"version": "1.4.5"}, "infoblox.nios_modules": {"version": "1.6.1"}, "inspur.ispim": {"version": "2.2.3"}, "inspur.sm": {"version": "2.3.0"}, "junipernetworks.junos": {"version": "8.0.0"}, "kaytus.ksmanage": {"version": "1.2.2"}, "kubernetes.core": {"version": "3.2.0"}, "kubevirt.core": {"version": "1.5.0"}, "lowlydba.sqlserver": {"version": "2.3.3"}, "microsoft.ad": {"version": "1.7.1"}, "netapp.cloudmanager": {"version": "21.22.1"}, "netapp.ontap": {"version": "22.12.0"}, "netapp.storagegrid": {"version": "21.12.0"}, "netapp_eseries.santricity": {"version": "1.4.0"}, "netbox.netbox": {"version": "3.19.1"}, "ngine_io.cloudstack": {"version": "2.4.0"}, "ngine_io.exoscale": {"version": "1.1.0"}, "openstack.cloud": {"version": "2.2.0"}, "openvswitch.openvswitch": {"version": "2.1.1"}, "ovirt.ovirt": {"version": "3.2.0"}, "purestorage.flasharray": {"version": "1.31.1"}, "purestorage.flashblade": {"version": "1.18.0"}, "sensu.sensu_go": {"version": "1.14.0"}, "splunk.es": {"version": "3.0.0"}, "t_systems_mms.icinga_director": {"version": "2.0.1"}, "telekom_mms.icinga_director": {"version": "2.1.2"}, "theforeman.foreman": {"version": "4.2.0"}, "vmware.vmware": {"version": "1.5.0"}, "vmware.vmware_rest": {"version": "3.1.0"}, "vultr.cloud": {"version": "1.13.0"}, "vyos.vyos": {"version": "4.1.0"}, "wti.remote": {"version": "1.0.8"}}}
+2024-10-09 17:19:27,761 p=4965 u=admin n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: lbservers
+
+2024-10-09 17:19:27,762 p=4965 u=admin n=ansible | ERROR! Attempting to decrypt but no vault secrets found
+2024-10-09 17:19:28,954 p=4968 u=admin n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2024-10-09 17:19:29,020 p=4948 u=admin n=ansiblelint | Listing 4 violation(s) that are fatal
+2024-10-09 17:21:15,175 p=5012 u=admin n=ansible | {"/usr/lib/python3/dist-packages/ansible_collections": {"amazon.aws": {"version": "8.2.1"}, "ansible.netcommon": {"version": "6.1.3"}, "ansible.posix": {"version": "1.5.4"}, "ansible.utils": {"version": "4.1.0"}, "ansible.windows": {"version": "2.5.0"}, "arista.eos": {"version": "9.0.0"}, "awx.awx": {"version": "24.6.1"}, "azure.azcollection": {"version": "2.7.0"}, "check_point.mgmt": {"version": "5.2.3"}, "chocolatey.chocolatey": {"version": "1.5.1"}, "cisco.aci": {"version": "2.10.1"}, "cisco.asa": {"version": "5.0.1"}, "cisco.dnac": {"version": "6.18.0"}, "cisco.intersight": {"version": "2.0.17"}, "cisco.ios": {"version": "8.0.0"}, "cisco.iosxr": {"version": "9.0.0"}, "cisco.ise": {"version": "2.9.3"}, "cisco.meraki": {"version": "2.18.1"}, "cisco.mso": {"version": "2.9.0"}, "cisco.nxos": {"version": "8.1.0"}, "cisco.ucs": {"version": "1.11.0"}, "cloud.common": {"version": "3.0.0"}, "cloudscale_ch.cloud": {"version": "2.4.0"}, "community.aws": {"version": "8.0.0"}, "community.ciscosmb": {"version": "1.0.9"}, "community.crypto": {"version": "2.22.0"}, "community.digitalocean": {"version": "1.27.0"}, "community.dns": {"version": "3.0.4"}, "community.docker": {"version": "3.12.1"}, "community.general": {"version": "9.4.0"}, "community.grafana": {"version": "1.9.1"}, "community.hashi_vault": {"version": "6.2.0"}, "community.hrobot": {"version": "2.0.1"}, "community.library_inventory_filtering_v1": {"version": "1.0.1"}, "community.libvirt": {"version": "1.3.0"}, "community.mongodb": {"version": "1.7.6"}, "community.mysql": {"version": "3.10.3"}, "community.network": {"version": "5.0.3"}, "community.okd": {"version": "3.0.1"}, "community.postgresql": {"version": "3.5.0"}, "community.proxysql": {"version": "1.6.0"}, "community.rabbitmq": {"version": "1.3.0"}, "community.routeros": {"version": "2.19.0"}, "community.sap_libs": {"version": "1.4.2"}, "community.sops": {"version": "1.9.0"}, "community.vmware": {"version": "4.7.0"}, "community.windows": {"version": "2.3.0"}, "community.zabbix": {"version": "2.5.1"}, "containers.podman": {"version": "1.15.4"}, "cyberark.conjur": {"version": "1.3.0"}, "cyberark.pas": {"version": "1.0.27"}, "dellemc.enterprise_sonic": {"version": "2.5.0"}, "dellemc.openmanage": {"version": "9.6.0"}, "dellemc.powerflex": {"version": "2.5.0"}, "dellemc.unity": {"version": "2.0.0"}, "f5networks.f5_modules": {"version": "1.30.1"}, "fortinet.fortimanager": {"version": "2.7.0"}, "fortinet.fortios": {"version": "2.3.7"}, "frr.frr": {"version": "2.0.2"}, "google.cloud": {"version": "1.4.1"}, "grafana.grafana": {"version": "5.5.0"}, "hetzner.hcloud": {"version": "3.1.1"}, "ibm.qradar": {"version": "3.0.0"}, "ibm.spectrum_virtualize": {"version": "2.0.0"}, "ibm.storage_virtualize": {"version": "2.4.1"}, "ieisystem.inmanage": {"version": "2.0.0"}, "infinidat.infinibox": {"version": "1.4.5"}, "infoblox.nios_modules": {"version": "1.6.1"}, "inspur.ispim": {"version": "2.2.3"}, "inspur.sm": {"version": "2.3.0"}, "junipernetworks.junos": {"version": "8.0.0"}, "kaytus.ksmanage": {"version": "1.2.2"}, "kubernetes.core": {"version": "3.2.0"}, "kubevirt.core": {"version": "1.5.0"}, "lowlydba.sqlserver": {"version": "2.3.3"}, "microsoft.ad": {"version": "1.7.1"}, "netapp.cloudmanager": {"version": "21.22.1"}, "netapp.ontap": {"version": "22.12.0"}, "netapp.storagegrid": {"version": "21.12.0"}, "netapp_eseries.santricity": {"version": "1.4.0"}, "netbox.netbox": {"version": "3.19.1"}, "ngine_io.cloudstack": {"version": "2.4.0"}, "ngine_io.exoscale": {"version": "1.1.0"}, "openstack.cloud": {"version": "2.2.0"}, "openvswitch.openvswitch": {"version": "2.1.1"}, "ovirt.ovirt": {"version": "3.2.0"}, "purestorage.flasharray": {"version": "1.31.1"}, "purestorage.flashblade": {"version": "1.18.0"}, "sensu.sensu_go": {"version": "1.14.0"}, "splunk.es": {"version": "3.0.0"}, "t_systems_mms.icinga_director": {"version": "2.0.1"}, "telekom_mms.icinga_director": {"version": "2.1.2"}, "theforeman.foreman": {"version": "4.2.0"}, "vmware.vmware": {"version": "1.5.0"}, "vmware.vmware_rest": {"version": "3.1.0"}, "vultr.cloud": {"version": "1.13.0"}, "vyos.vyos": {"version": "4.1.0"}, "wti.remote": {"version": "1.0.8"}}}
+2024-10-09 17:21:16,310 p=5021 u=admin n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: lbservers
+
+2024-10-09 17:21:16,311 p=5021 u=admin n=ansible | ERROR! Attempting to decrypt but no vault secrets found
+2024-10-09 17:21:17,464 p=5024 u=admin n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2024-10-09 17:21:17,531 p=5004 u=admin n=ansiblelint | Listing 4 violation(s) that are fatal
+2024-10-09 17:29:25,788 p=5142 u=admin n=ansible | [WARNING]: Skipping unexpected key (lbservers) in group (children), only "vars",
+"children" and "hosts" are valid
+
+2024-10-09 17:29:25,789 p=5142 u=admin n=ansible | [WARNING]: Skipping unexpected key (webservers) in group (children), only "vars",
+"children" and "hosts" are valid
+
+2024-10-09 17:29:25,795 p=5142 u=admin n=ansible | {
+    "_meta": {
+        "hostvars": {}
+    },
+    "all": {
+        "children": [
+            "ungrouped",
+            "children",
+            "prod"
+        ]
+    },
+    "prod": {
+        "children": [
+            "lbservers",
+            "webservers"
+        ]
+    }
+}
+2024-10-09 17:31:38,319 p=5192 u=admin n=ansible | {
+    "_meta": {
+        "hostvars": {
+            "srv-lb1": {
+                "ansible_host": "10.100.2.47",
+                "ansible_ssh_common_args": "-o StrictHostKeyChecking=no"
+            },
+            "srv-web1": {
+                "ansible_host": "10.100.2.180",
+                "ansible_ssh_common_args": "-o StrictHostKeyChecking=no"
+            },
+            "srv-web2": {
+                "ansible_host": "10.100.2.48",
+                "ansible_ssh_common_args": "-o StrictHostKeyChecking=no"
+            }
+        }
+    },
+    "all": {
+        "children": [
+            "ungrouped",
+            "prod"
+        ]
+    },
+    "lbservers": {
+        "hosts": [
+            "srv-lb1"
+        ]
+    },
+    "prod": {
+        "children": [
+            "lbservers",
+            "webservers"
+        ]
+    },
+    "webservers": {
+        "hosts": [
+            "srv-web1",
+            "srv-web2"
+        ]
+    }
+}
+2024-10-09 17:34:13,959 p=5229 u=admin n=ansible | PLAY [Instalation loadbalancer Nginx] *****************************************************
+2024-10-09 17:34:13,974 p=5229 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************
+2024-10-09 17:34:16,405 p=5229 u=admin n=ansible | [WARNING]: Platform linux on host srv-lb1 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-10-09 17:34:16,405 p=5229 u=admin n=ansible | ok: [srv-lb1]
+2024-10-09 17:34:16,415 p=5229 u=admin n=ansible | TASK [Install Docker] *********************************************************************
+2024-10-09 17:40:37,301 p=5229 u=admin n=ansible |  [ERROR]: User interrupted execution
+
+2024-10-09 17:41:08,080 p=5341 u=admin n=ansible | PLAY [Instalation loadbalancer Nginx] *****************************************************
+2024-10-09 17:41:08,090 p=5341 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************
+2024-10-09 17:41:09,912 p=5341 u=admin n=ansible | [WARNING]: Platform linux on host srv-lb1 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-10-09 17:41:09,913 p=5341 u=admin n=ansible | ok: [srv-lb1]
+2024-10-09 17:41:09,919 p=5341 u=admin n=ansible | TASK [Install Docker] *********************************************************************
+2024-10-09 17:41:33,226 p=5341 u=admin n=ansible |  [ERROR]: User interrupted execution
+
+2024-10-09 19:55:58,366 p=7060 u=admin n=ansible | {"/usr/lib/python3/dist-packages/ansible_collections": {"amazon.aws": {"version": "8.2.1"}, "ansible.netcommon": {"version": "6.1.3"}, "ansible.posix": {"version": "1.5.4"}, "ansible.utils": {"version": "4.1.0"}, "ansible.windows": {"version": "2.5.0"}, "arista.eos": {"version": "9.0.0"}, "awx.awx": {"version": "24.6.1"}, "azure.azcollection": {"version": "2.7.0"}, "check_point.mgmt": {"version": "5.2.3"}, "chocolatey.chocolatey": {"version": "1.5.1"}, "cisco.aci": {"version": "2.10.1"}, "cisco.asa": {"version": "5.0.1"}, "cisco.dnac": {"version": "6.18.0"}, "cisco.intersight": {"version": "2.0.17"}, "cisco.ios": {"version": "8.0.0"}, "cisco.iosxr": {"version": "9.0.0"}, "cisco.ise": {"version": "2.9.3"}, "cisco.meraki": {"version": "2.18.1"}, "cisco.mso": {"version": "2.9.0"}, "cisco.nxos": {"version": "8.1.0"}, "cisco.ucs": {"version": "1.11.0"}, "cloud.common": {"version": "3.0.0"}, "cloudscale_ch.cloud": {"version": "2.4.0"}, "community.aws": {"version": "8.0.0"}, "community.ciscosmb": {"version": "1.0.9"}, "community.crypto": {"version": "2.22.0"}, "community.digitalocean": {"version": "1.27.0"}, "community.dns": {"version": "3.0.4"}, "community.docker": {"version": "3.12.1"}, "community.general": {"version": "9.4.0"}, "community.grafana": {"version": "1.9.1"}, "community.hashi_vault": {"version": "6.2.0"}, "community.hrobot": {"version": "2.0.1"}, "community.library_inventory_filtering_v1": {"version": "1.0.1"}, "community.libvirt": {"version": "1.3.0"}, "community.mongodb": {"version": "1.7.6"}, "community.mysql": {"version": "3.10.3"}, "community.network": {"version": "5.0.3"}, "community.okd": {"version": "3.0.1"}, "community.postgresql": {"version": "3.5.0"}, "community.proxysql": {"version": "1.6.0"}, "community.rabbitmq": {"version": "1.3.0"}, "community.routeros": {"version": "2.19.0"}, "community.sap_libs": {"version": "1.4.2"}, "community.sops": {"version": "1.9.0"}, "community.vmware": {"version": "4.7.0"}, "community.windows": {"version": "2.3.0"}, "community.zabbix": {"version": "2.5.1"}, "containers.podman": {"version": "1.15.4"}, "cyberark.conjur": {"version": "1.3.0"}, "cyberark.pas": {"version": "1.0.27"}, "dellemc.enterprise_sonic": {"version": "2.5.0"}, "dellemc.openmanage": {"version": "9.6.0"}, "dellemc.powerflex": {"version": "2.5.0"}, "dellemc.unity": {"version": "2.0.0"}, "f5networks.f5_modules": {"version": "1.30.1"}, "fortinet.fortimanager": {"version": "2.7.0"}, "fortinet.fortios": {"version": "2.3.7"}, "frr.frr": {"version": "2.0.2"}, "google.cloud": {"version": "1.4.1"}, "grafana.grafana": {"version": "5.5.0"}, "hetzner.hcloud": {"version": "3.1.1"}, "ibm.qradar": {"version": "3.0.0"}, "ibm.spectrum_virtualize": {"version": "2.0.0"}, "ibm.storage_virtualize": {"version": "2.4.1"}, "ieisystem.inmanage": {"version": "2.0.0"}, "infinidat.infinibox": {"version": "1.4.5"}, "infoblox.nios_modules": {"version": "1.6.1"}, "inspur.ispim": {"version": "2.2.3"}, "inspur.sm": {"version": "2.3.0"}, "junipernetworks.junos": {"version": "8.0.0"}, "kaytus.ksmanage": {"version": "1.2.2"}, "kubernetes.core": {"version": "3.2.0"}, "kubevirt.core": {"version": "1.5.0"}, "lowlydba.sqlserver": {"version": "2.3.3"}, "microsoft.ad": {"version": "1.7.1"}, "netapp.cloudmanager": {"version": "21.22.1"}, "netapp.ontap": {"version": "22.12.0"}, "netapp.storagegrid": {"version": "21.12.0"}, "netapp_eseries.santricity": {"version": "1.4.0"}, "netbox.netbox": {"version": "3.19.1"}, "ngine_io.cloudstack": {"version": "2.4.0"}, "ngine_io.exoscale": {"version": "1.1.0"}, "openstack.cloud": {"version": "2.2.0"}, "openvswitch.openvswitch": {"version": "2.1.1"}, "ovirt.ovirt": {"version": "3.2.0"}, "purestorage.flasharray": {"version": "1.31.1"}, "purestorage.flashblade": {"version": "1.18.0"}, "sensu.sensu_go": {"version": "1.14.0"}, "splunk.es": {"version": "3.0.0"}, "t_systems_mms.icinga_director": {"version": "2.0.1"}, "telekom_mms.icinga_director": {"version": "2.1.2"}, "theforeman.foreman": {"version": "4.2.0"}, "vmware.vmware": {"version": "1.5.0"}, "vmware.vmware_rest": {"version": "3.1.0"}, "vultr.cloud": {"version": "1.13.0"}, "vyos.vyos": {"version": "4.1.0"}, "wti.remote": {"version": "1.0.8"}}}
+2024-10-09 19:55:59,513 p=7069 u=admin n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: lbservers
+
+2024-10-09 19:55:59,514 p=7069 u=admin n=ansible | ERROR! Attempting to decrypt but no vault secrets found
+2024-10-09 19:56:00,676 p=7072 u=admin n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2024-10-09 19:56:00,740 p=7052 u=admin n=ansiblelint | Listing 4 violation(s) that are fatal
+2024-10-09 20:03:59,961 p=7180 u=admin n=ansible | PLAY [Instalation loadbalancer Nginx] *****************************************************
+2024-10-09 20:03:59,971 p=7180 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************
+2024-10-09 20:04:02,283 p=7180 u=admin n=ansible | [WARNING]: Platform linux on host srv-lb1 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-10-09 20:04:02,284 p=7180 u=admin n=ansible | ok: [srv-lb1]
+2024-10-09 20:04:02,290 p=7180 u=admin n=ansible | TASK [Install Docker] *********************************************************************
+2024-10-09 20:06:43,376 p=7180 u=admin n=ansible |  [ERROR]: User interrupted execution
+
+2024-10-09 20:13:26,334 p=7339 u=admin n=ansible | PLAY [Instalation loadbalancer Nginx] *****************************************************
+2024-10-09 20:13:26,344 p=7339 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************
+2024-10-09 20:13:28,681 p=7339 u=admin n=ansible | [WARNING]: Platform linux on host srv-lb1 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-10-09 20:13:28,682 p=7339 u=admin n=ansible | ok: [srv-lb1]
+2024-10-09 20:13:28,688 p=7339 u=admin n=ansible | TASK [Install Docker] *********************************************************************
+2024-10-09 20:15:51,544 p=7339 u=admin n=ansible |  [ERROR]: User interrupted execution
+
+2024-10-09 20:16:41,743 p=7432 u=admin n=ansible | {"/usr/lib/python3/dist-packages/ansible_collections": {"amazon.aws": {"version": "8.2.1"}, "ansible.netcommon": {"version": "6.1.3"}, "ansible.posix": {"version": "1.5.4"}, "ansible.utils": {"version": "4.1.0"}, "ansible.windows": {"version": "2.5.0"}, "arista.eos": {"version": "9.0.0"}, "awx.awx": {"version": "24.6.1"}, "azure.azcollection": {"version": "2.7.0"}, "check_point.mgmt": {"version": "5.2.3"}, "chocolatey.chocolatey": {"version": "1.5.1"}, "cisco.aci": {"version": "2.10.1"}, "cisco.asa": {"version": "5.0.1"}, "cisco.dnac": {"version": "6.18.0"}, "cisco.intersight": {"version": "2.0.17"}, "cisco.ios": {"version": "8.0.0"}, "cisco.iosxr": {"version": "9.0.0"}, "cisco.ise": {"version": "2.9.3"}, "cisco.meraki": {"version": "2.18.1"}, "cisco.mso": {"version": "2.9.0"}, "cisco.nxos": {"version": "8.1.0"}, "cisco.ucs": {"version": "1.11.0"}, "cloud.common": {"version": "3.0.0"}, "cloudscale_ch.cloud": {"version": "2.4.0"}, "community.aws": {"version": "8.0.0"}, "community.ciscosmb": {"version": "1.0.9"}, "community.crypto": {"version": "2.22.0"}, "community.digitalocean": {"version": "1.27.0"}, "community.dns": {"version": "3.0.4"}, "community.docker": {"version": "3.12.1"}, "community.general": {"version": "9.4.0"}, "community.grafana": {"version": "1.9.1"}, "community.hashi_vault": {"version": "6.2.0"}, "community.hrobot": {"version": "2.0.1"}, "community.library_inventory_filtering_v1": {"version": "1.0.1"}, "community.libvirt": {"version": "1.3.0"}, "community.mongodb": {"version": "1.7.6"}, "community.mysql": {"version": "3.10.3"}, "community.network": {"version": "5.0.3"}, "community.okd": {"version": "3.0.1"}, "community.postgresql": {"version": "3.5.0"}, "community.proxysql": {"version": "1.6.0"}, "community.rabbitmq": {"version": "1.3.0"}, "community.routeros": {"version": "2.19.0"}, "community.sap_libs": {"version": "1.4.2"}, "community.sops": {"version": "1.9.0"}, "community.vmware": {"version": "4.7.0"}, "community.windows": {"version": "2.3.0"}, "community.zabbix": {"version": "2.5.1"}, "containers.podman": {"version": "1.15.4"}, "cyberark.conjur": {"version": "1.3.0"}, "cyberark.pas": {"version": "1.0.27"}, "dellemc.enterprise_sonic": {"version": "2.5.0"}, "dellemc.openmanage": {"version": "9.6.0"}, "dellemc.powerflex": {"version": "2.5.0"}, "dellemc.unity": {"version": "2.0.0"}, "f5networks.f5_modules": {"version": "1.30.1"}, "fortinet.fortimanager": {"version": "2.7.0"}, "fortinet.fortios": {"version": "2.3.7"}, "frr.frr": {"version": "2.0.2"}, "google.cloud": {"version": "1.4.1"}, "grafana.grafana": {"version": "5.5.0"}, "hetzner.hcloud": {"version": "3.1.1"}, "ibm.qradar": {"version": "3.0.0"}, "ibm.spectrum_virtualize": {"version": "2.0.0"}, "ibm.storage_virtualize": {"version": "2.4.1"}, "ieisystem.inmanage": {"version": "2.0.0"}, "infinidat.infinibox": {"version": "1.4.5"}, "infoblox.nios_modules": {"version": "1.6.1"}, "inspur.ispim": {"version": "2.2.3"}, "inspur.sm": {"version": "2.3.0"}, "junipernetworks.junos": {"version": "8.0.0"}, "kaytus.ksmanage": {"version": "1.2.2"}, "kubernetes.core": {"version": "3.2.0"}, "kubevirt.core": {"version": "1.5.0"}, "lowlydba.sqlserver": {"version": "2.3.3"}, "microsoft.ad": {"version": "1.7.1"}, "netapp.cloudmanager": {"version": "21.22.1"}, "netapp.ontap": {"version": "22.12.0"}, "netapp.storagegrid": {"version": "21.12.0"}, "netapp_eseries.santricity": {"version": "1.4.0"}, "netbox.netbox": {"version": "3.19.1"}, "ngine_io.cloudstack": {"version": "2.4.0"}, "ngine_io.exoscale": {"version": "1.1.0"}, "openstack.cloud": {"version": "2.2.0"}, "openvswitch.openvswitch": {"version": "2.1.1"}, "ovirt.ovirt": {"version": "3.2.0"}, "purestorage.flasharray": {"version": "1.31.1"}, "purestorage.flashblade": {"version": "1.18.0"}, "sensu.sensu_go": {"version": "1.14.0"}, "splunk.es": {"version": "3.0.0"}, "t_systems_mms.icinga_director": {"version": "2.0.1"}, "telekom_mms.icinga_director": {"version": "2.1.2"}, "theforeman.foreman": {"version": "4.2.0"}, "vmware.vmware": {"version": "1.5.0"}, "vmware.vmware_rest": {"version": "3.1.0"}, "vultr.cloud": {"version": "1.13.0"}, "vyos.vyos": {"version": "4.1.0"}, "wti.remote": {"version": "1.0.8"}}}
+2024-10-09 20:16:42,887 p=7441 u=admin n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: lbservers
+
+2024-10-09 20:16:42,888 p=7441 u=admin n=ansible | ERROR! Attempting to decrypt but no vault secrets found
+2024-10-09 20:16:44,043 p=7444 u=admin n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2024-10-09 20:16:44,108 p=7423 u=admin n=ansiblelint | Listing 4 violation(s) that are fatal
+2024-10-09 20:20:06,866 p=7507 u=admin n=ansible | {"/usr/lib/python3/dist-packages/ansible_collections": {"amazon.aws": {"version": "8.2.1"}, "ansible.netcommon": {"version": "6.1.3"}, "ansible.posix": {"version": "1.5.4"}, "ansible.utils": {"version": "4.1.0"}, "ansible.windows": {"version": "2.5.0"}, "arista.eos": {"version": "9.0.0"}, "awx.awx": {"version": "24.6.1"}, "azure.azcollection": {"version": "2.7.0"}, "check_point.mgmt": {"version": "5.2.3"}, "chocolatey.chocolatey": {"version": "1.5.1"}, "cisco.aci": {"version": "2.10.1"}, "cisco.asa": {"version": "5.0.1"}, "cisco.dnac": {"version": "6.18.0"}, "cisco.intersight": {"version": "2.0.17"}, "cisco.ios": {"version": "8.0.0"}, "cisco.iosxr": {"version": "9.0.0"}, "cisco.ise": {"version": "2.9.3"}, "cisco.meraki": {"version": "2.18.1"}, "cisco.mso": {"version": "2.9.0"}, "cisco.nxos": {"version": "8.1.0"}, "cisco.ucs": {"version": "1.11.0"}, "cloud.common": {"version": "3.0.0"}, "cloudscale_ch.cloud": {"version": "2.4.0"}, "community.aws": {"version": "8.0.0"}, "community.ciscosmb": {"version": "1.0.9"}, "community.crypto": {"version": "2.22.0"}, "community.digitalocean": {"version": "1.27.0"}, "community.dns": {"version": "3.0.4"}, "community.docker": {"version": "3.12.1"}, "community.general": {"version": "9.4.0"}, "community.grafana": {"version": "1.9.1"}, "community.hashi_vault": {"version": "6.2.0"}, "community.hrobot": {"version": "2.0.1"}, "community.library_inventory_filtering_v1": {"version": "1.0.1"}, "community.libvirt": {"version": "1.3.0"}, "community.mongodb": {"version": "1.7.6"}, "community.mysql": {"version": "3.10.3"}, "community.network": {"version": "5.0.3"}, "community.okd": {"version": "3.0.1"}, "community.postgresql": {"version": "3.5.0"}, "community.proxysql": {"version": "1.6.0"}, "community.rabbitmq": {"version": "1.3.0"}, "community.routeros": {"version": "2.19.0"}, "community.sap_libs": {"version": "1.4.2"}, "community.sops": {"version": "1.9.0"}, "community.vmware": {"version": "4.7.0"}, "community.windows": {"version": "2.3.0"}, "community.zabbix": {"version": "2.5.1"}, "containers.podman": {"version": "1.15.4"}, "cyberark.conjur": {"version": "1.3.0"}, "cyberark.pas": {"version": "1.0.27"}, "dellemc.enterprise_sonic": {"version": "2.5.0"}, "dellemc.openmanage": {"version": "9.6.0"}, "dellemc.powerflex": {"version": "2.5.0"}, "dellemc.unity": {"version": "2.0.0"}, "f5networks.f5_modules": {"version": "1.30.1"}, "fortinet.fortimanager": {"version": "2.7.0"}, "fortinet.fortios": {"version": "2.3.7"}, "frr.frr": {"version": "2.0.2"}, "google.cloud": {"version": "1.4.1"}, "grafana.grafana": {"version": "5.5.0"}, "hetzner.hcloud": {"version": "3.1.1"}, "ibm.qradar": {"version": "3.0.0"}, "ibm.spectrum_virtualize": {"version": "2.0.0"}, "ibm.storage_virtualize": {"version": "2.4.1"}, "ieisystem.inmanage": {"version": "2.0.0"}, "infinidat.infinibox": {"version": "1.4.5"}, "infoblox.nios_modules": {"version": "1.6.1"}, "inspur.ispim": {"version": "2.2.3"}, "inspur.sm": {"version": "2.3.0"}, "junipernetworks.junos": {"version": "8.0.0"}, "kaytus.ksmanage": {"version": "1.2.2"}, "kubernetes.core": {"version": "3.2.0"}, "kubevirt.core": {"version": "1.5.0"}, "lowlydba.sqlserver": {"version": "2.3.3"}, "microsoft.ad": {"version": "1.7.1"}, "netapp.cloudmanager": {"version": "21.22.1"}, "netapp.ontap": {"version": "22.12.0"}, "netapp.storagegrid": {"version": "21.12.0"}, "netapp_eseries.santricity": {"version": "1.4.0"}, "netbox.netbox": {"version": "3.19.1"}, "ngine_io.cloudstack": {"version": "2.4.0"}, "ngine_io.exoscale": {"version": "1.1.0"}, "openstack.cloud": {"version": "2.2.0"}, "openvswitch.openvswitch": {"version": "2.1.1"}, "ovirt.ovirt": {"version": "3.2.0"}, "purestorage.flasharray": {"version": "1.31.1"}, "purestorage.flashblade": {"version": "1.18.0"}, "sensu.sensu_go": {"version": "1.14.0"}, "splunk.es": {"version": "3.0.0"}, "t_systems_mms.icinga_director": {"version": "2.0.1"}, "telekom_mms.icinga_director": {"version": "2.1.2"}, "theforeman.foreman": {"version": "4.2.0"}, "vmware.vmware": {"version": "1.5.0"}, "vmware.vmware_rest": {"version": "3.1.0"}, "vultr.cloud": {"version": "1.13.0"}, "vyos.vyos": {"version": "4.1.0"}, "wti.remote": {"version": "1.0.8"}}}
+2024-10-09 20:20:08,010 p=7516 u=admin n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: lbservers
+
+2024-10-09 20:20:08,010 p=7516 u=admin n=ansible | ERROR! Attempting to decrypt but no vault secrets found
+2024-10-09 20:20:09,174 p=7522 u=admin n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2024-10-09 20:20:09,238 p=7499 u=admin n=ansiblelint | Listing 4 violation(s) that are fatal
+2024-10-09 20:24:03,795 p=7587 u=admin n=ansible | {"/usr/lib/python3/dist-packages/ansible_collections": {"amazon.aws": {"version": "8.2.1"}, "ansible.netcommon": {"version": "6.1.3"}, "ansible.posix": {"version": "1.5.4"}, "ansible.utils": {"version": "4.1.0"}, "ansible.windows": {"version": "2.5.0"}, "arista.eos": {"version": "9.0.0"}, "awx.awx": {"version": "24.6.1"}, "azure.azcollection": {"version": "2.7.0"}, "check_point.mgmt": {"version": "5.2.3"}, "chocolatey.chocolatey": {"version": "1.5.1"}, "cisco.aci": {"version": "2.10.1"}, "cisco.asa": {"version": "5.0.1"}, "cisco.dnac": {"version": "6.18.0"}, "cisco.intersight": {"version": "2.0.17"}, "cisco.ios": {"version": "8.0.0"}, "cisco.iosxr": {"version": "9.0.0"}, "cisco.ise": {"version": "2.9.3"}, "cisco.meraki": {"version": "2.18.1"}, "cisco.mso": {"version": "2.9.0"}, "cisco.nxos": {"version": "8.1.0"}, "cisco.ucs": {"version": "1.11.0"}, "cloud.common": {"version": "3.0.0"}, "cloudscale_ch.cloud": {"version": "2.4.0"}, "community.aws": {"version": "8.0.0"}, "community.ciscosmb": {"version": "1.0.9"}, "community.crypto": {"version": "2.22.0"}, "community.digitalocean": {"version": "1.27.0"}, "community.dns": {"version": "3.0.4"}, "community.docker": {"version": "3.12.1"}, "community.general": {"version": "9.4.0"}, "community.grafana": {"version": "1.9.1"}, "community.hashi_vault": {"version": "6.2.0"}, "community.hrobot": {"version": "2.0.1"}, "community.library_inventory_filtering_v1": {"version": "1.0.1"}, "community.libvirt": {"version": "1.3.0"}, "community.mongodb": {"version": "1.7.6"}, "community.mysql": {"version": "3.10.3"}, "community.network": {"version": "5.0.3"}, "community.okd": {"version": "3.0.1"}, "community.postgresql": {"version": "3.5.0"}, "community.proxysql": {"version": "1.6.0"}, "community.rabbitmq": {"version": "1.3.0"}, "community.routeros": {"version": "2.19.0"}, "community.sap_libs": {"version": "1.4.2"}, "community.sops": {"version": "1.9.0"}, "community.vmware": {"version": "4.7.0"}, "community.windows": {"version": "2.3.0"}, "community.zabbix": {"version": "2.5.1"}, "containers.podman": {"version": "1.15.4"}, "cyberark.conjur": {"version": "1.3.0"}, "cyberark.pas": {"version": "1.0.27"}, "dellemc.enterprise_sonic": {"version": "2.5.0"}, "dellemc.openmanage": {"version": "9.6.0"}, "dellemc.powerflex": {"version": "2.5.0"}, "dellemc.unity": {"version": "2.0.0"}, "f5networks.f5_modules": {"version": "1.30.1"}, "fortinet.fortimanager": {"version": "2.7.0"}, "fortinet.fortios": {"version": "2.3.7"}, "frr.frr": {"version": "2.0.2"}, "google.cloud": {"version": "1.4.1"}, "grafana.grafana": {"version": "5.5.0"}, "hetzner.hcloud": {"version": "3.1.1"}, "ibm.qradar": {"version": "3.0.0"}, "ibm.spectrum_virtualize": {"version": "2.0.0"}, "ibm.storage_virtualize": {"version": "2.4.1"}, "ieisystem.inmanage": {"version": "2.0.0"}, "infinidat.infinibox": {"version": "1.4.5"}, "infoblox.nios_modules": {"version": "1.6.1"}, "inspur.ispim": {"version": "2.2.3"}, "inspur.sm": {"version": "2.3.0"}, "junipernetworks.junos": {"version": "8.0.0"}, "kaytus.ksmanage": {"version": "1.2.2"}, "kubernetes.core": {"version": "3.2.0"}, "kubevirt.core": {"version": "1.5.0"}, "lowlydba.sqlserver": {"version": "2.3.3"}, "microsoft.ad": {"version": "1.7.1"}, "netapp.cloudmanager": {"version": "21.22.1"}, "netapp.ontap": {"version": "22.12.0"}, "netapp.storagegrid": {"version": "21.12.0"}, "netapp_eseries.santricity": {"version": "1.4.0"}, "netbox.netbox": {"version": "3.19.1"}, "ngine_io.cloudstack": {"version": "2.4.0"}, "ngine_io.exoscale": {"version": "1.1.0"}, "openstack.cloud": {"version": "2.2.0"}, "openvswitch.openvswitch": {"version": "2.1.1"}, "ovirt.ovirt": {"version": "3.2.0"}, "purestorage.flasharray": {"version": "1.31.1"}, "purestorage.flashblade": {"version": "1.18.0"}, "sensu.sensu_go": {"version": "1.14.0"}, "splunk.es": {"version": "3.0.0"}, "t_systems_mms.icinga_director": {"version": "2.0.1"}, "telekom_mms.icinga_director": {"version": "2.1.2"}, "theforeman.foreman": {"version": "4.2.0"}, "vmware.vmware": {"version": "1.5.0"}, "vmware.vmware_rest": {"version": "3.1.0"}, "vultr.cloud": {"version": "1.13.0"}, "vyos.vyos": {"version": "4.1.0"}, "wti.remote": {"version": "1.0.8"}}}
+2024-10-09 20:24:05,019 p=7596 u=admin n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: lbservers
+
+2024-10-09 20:24:05,020 p=7596 u=admin n=ansible | ERROR! Attempting to decrypt but no vault secrets found
+2024-10-09 20:24:06,258 p=7601 u=admin n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2024-10-09 20:24:06,329 p=7579 u=admin n=ansiblelint | Listing 4 violation(s) that are fatal
+2024-10-09 20:24:28,824 p=7604 u=admin n=ansible | PLAY [Instalation loadbalancer Nginx] *****************************************************
+2024-10-09 20:24:28,834 p=7604 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************
+2024-10-09 20:24:31,161 p=7604 u=admin n=ansible | [WARNING]: Platform linux on host srv-lb1 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-10-09 20:24:31,161 p=7604 u=admin n=ansible | ok: [srv-lb1]
+2024-10-09 20:24:31,169 p=7604 u=admin n=ansible | TASK [Install Docker] *********************************************************************
+2024-10-09 20:26:20,945 p=7604 u=admin n=ansible |  [ERROR]: User interrupted execution
+
+2024-10-09 20:29:36,136 p=7696 u=admin n=ansible | PLAY [Instalation loadbalancer Nginx] *****************************************************
+2024-10-09 20:29:36,147 p=7696 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************
+2024-10-09 20:29:38,506 p=7696 u=admin n=ansible | [WARNING]: Platform linux on host srv-lb1 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-10-09 20:29:38,507 p=7696 u=admin n=ansible | ok: [srv-lb1]
+2024-10-09 20:29:38,515 p=7696 u=admin n=ansible | TASK [Install Docker] *********************************************************************
+2024-10-09 21:10:12,601 p=7696 u=admin n=ansible | fatal: [srv-lb1]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: unknown reason"}
+2024-10-09 21:10:12,603 p=7696 u=admin n=ansible | PLAY RECAP ********************************************************************************
+2024-10-09 21:10:12,603 p=7696 u=admin n=ansible | srv-lb1                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-09 21:13:25,701 p=8305 u=admin n=ansible | PLAY [Instalation loadbalancer Nginx] *****************************************************
+2024-10-09 21:13:25,711 p=8305 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************
+2024-10-09 21:13:28,075 p=8305 u=admin n=ansible | [WARNING]: Platform linux on host srv-lb1 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-10-09 21:13:28,076 p=8305 u=admin n=ansible | ok: [srv-lb1]
+2024-10-09 21:13:28,082 p=8305 u=admin n=ansible | TASK [Install Docker] *********************************************************************
+2024-10-09 21:14:11,493 p=8305 u=admin n=ansible |  [ERROR]: User interrupted execution
+
+2024-10-09 21:42:40,190 p=9492 u=admin n=ansible | PLAY [Instalation loadbalancer Nginx] *****************************************************
+2024-10-09 21:42:40,204 p=9492 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************
+2024-10-09 21:42:42,410 p=9492 u=admin n=ansible | [WARNING]: Platform linux on host srv-lb1 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-10-09 21:42:42,411 p=9492 u=admin n=ansible | ok: [srv-lb1]
+2024-10-09 21:42:42,418 p=9492 u=admin n=ansible | TASK [Install Docker] *********************************************************************
+2024-10-09 21:42:45,107 p=9492 u=admin n=ansible | ok: [srv-lb1]
+2024-10-09 21:42:45,151 p=9492 u=admin n=ansible | TASK [Create Nginx Container] *************************************************************
+2024-10-09 21:42:49,112 p=9492 u=admin n=ansible | changed: [srv-lb1]
+2024-10-09 21:42:49,137 p=9492 u=admin n=ansible | PLAY [Instalation des deux serveurs srv-web1, web2] ***************************************
+2024-10-09 21:42:49,140 p=9492 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************
+2024-10-09 21:42:51,066 p=9492 u=admin n=ansible | [WARNING]: Platform linux on host srv-web1 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-10-09 21:42:51,066 p=9492 u=admin n=ansible | ok: [srv-web1]
+2024-10-09 21:42:51,094 p=9492 u=admin n=ansible | [WARNING]: Platform linux on host srv-web2 is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-10-09 21:42:51,094 p=9492 u=admin n=ansible | ok: [srv-web2]
+2024-10-09 21:42:51,101 p=9492 u=admin n=ansible | TASK [Install Docker] *********************************************************************
+2024-10-09 21:43:08,647 p=9492 u=admin n=ansible | changed: [srv-web1]
+2024-10-09 21:43:09,122 p=9492 u=admin n=ansible | changed: [srv-web2]
+2024-10-09 21:43:09,153 p=9492 u=admin n=ansible | TASK [Create Frontend Network] ************************************************************
+2024-10-09 21:43:10,192 p=9492 u=admin n=ansible | changed: [srv-web1]
+2024-10-09 21:43:10,212 p=9492 u=admin n=ansible | changed: [srv-web2]
+2024-10-09 21:43:10,219 p=9492 u=admin n=ansible | TASK [Create Backend Network] *************************************************************
+2024-10-09 21:43:11,024 p=9492 u=admin n=ansible | changed: [srv-web2]
+2024-10-09 21:43:11,030 p=9492 u=admin n=ansible | changed: [srv-web1]
+2024-10-09 21:43:11,038 p=9492 u=admin n=ansible | TASK [Create Persistent MySQL Volume] *****************************************************
+2024-10-09 21:43:11,909 p=9492 u=admin n=ansible | changed: [srv-web2]
+2024-10-09 21:43:11,914 p=9492 u=admin n=ansible | changed: [srv-web1]
+2024-10-09 21:43:11,922 p=9492 u=admin n=ansible | TASK [Create PHP-FPM Container] ***********************************************************
+2024-10-09 21:43:12,611 p=9492 u=admin n=ansible | fatal: [srv-web1]: FAILED! => {"changed": false, "msg": "dictionary requested, could not parse JSON or key=value"}
+2024-10-09 21:43:12,656 p=9492 u=admin n=ansible | fatal: [srv-web2]: FAILED! => {"changed": false, "msg": "dictionary requested, could not parse JSON or key=value"}
+2024-10-09 21:43:12,657 p=9492 u=admin n=ansible | PLAY RECAP ********************************************************************************
+2024-10-09 21:43:12,658 p=9492 u=admin n=ansible | srv-lb1                    : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-09 21:43:12,658 p=9492 u=admin n=ansible | srv-web1                   : ok=5    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-09 21:43:12,658 p=9492 u=admin n=ansible | srv-web2                   : ok=5    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
