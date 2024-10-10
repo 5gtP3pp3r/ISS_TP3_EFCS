@@ -25,8 +25,8 @@ echo "L'adresse IP externe de la VM est : " . $ipExterne;
 ?>
 ```
 
-```json
-upstream monsite-servers {
+```terminal
+upstream srv-lb1-servers {
         server srv-web1 max_fails=2;
         server srv-web2 max_fails=2;
 }
@@ -36,7 +36,7 @@ server {
     server_name www.efcs.com;
 
     location / {
-        proxy_pass         http://monsite-servers;
+        proxy_pass         http://srv-lb1-servers;
         proxy_redirect     off;
         proxy_set_header   Host $host;
         proxy_set_header   X-Real-IP $remote_addr;
@@ -44,6 +44,7 @@ server {
         proxy_set_header   X-Forwarded-Host $server_name;
     }
 }
+
 ```
 
 ```yaml
