@@ -60,8 +60,8 @@
         ports:
           - "9000:9000"
         networks:
-            name: backend
-        status: strated
+           - name: backend
+        state: started
 
     - name: Create Apache Container
       community.docker.docker_container:
@@ -73,8 +73,8 @@
           - /home/admin/html/index.php:/usr/local/apache2/htdocs/index.php
           - /home/admin/HttpdConf/httpd.conf:/usr/local/apache2/conf/httpd.conf
         networks:
-          name: frontend
-          name:  backend
+          - name: frontend
+          - name: backend
         state: started
 
     - name: Create MySQL Container
@@ -88,6 +88,6 @@
         environment:
           MYSQL_ROOT_PASSWORD: rootpassword
         networks:
-          name: backend
+          - name: backend
         state: started
 

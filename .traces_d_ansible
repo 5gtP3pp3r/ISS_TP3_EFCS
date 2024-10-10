@@ -7206,3 +7206,305 @@ information.
 2024-10-10 03:41:52,331 p=25761 u=admin n=ansible | srv-lb1                    : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2024-10-10 03:41:52,332 p=25761 u=admin n=ansible | srv-web1                   : ok=9    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
 2024-10-10 03:41:52,332 p=25761 u=admin n=ansible | srv-web2                   : ok=9    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-10 08:44:13,095 p=29617 u=admin n=ansible | [WARNING]: While constructing a mapping from /home/admin/ISS_TP3_EFCS/web.yaml, line 76, column 11, found a duplicate dict key (name). Using last defined value
+only.
+
+2024-10-10 08:44:13,149 p=29617 u=admin n=ansible | ERROR! Decryption failed (no vault secrets were found that could decrypt) on /home/admin/ISS_TP3_EFCS/vars/secret-variables.yaml
+2024-10-10 08:44:38,419 p=29624 u=admin n=ansible | [WARNING]: While constructing a mapping from /home/admin/ISS_TP3_EFCS/web.yaml, line 76, column 11, found a duplicate dict key (name). Using last defined value
+only.
+
+2024-10-10 08:44:38,476 p=29624 u=admin n=ansible | PLAY [Installation loadbalancer Nginx] ****************************************************************************************************************************
+2024-10-10 08:44:38,485 p=29624 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2024-10-10 08:44:40,675 p=29624 u=admin n=ansible | [WARNING]: Platform linux on host srv-lb1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-10-10 08:44:40,675 p=29624 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:44:40,683 p=29624 u=admin n=ansible | TASK [Install Docker] *********************************************************************************************************************************************
+2024-10-10 08:44:46,672 p=29624 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:44:46,692 p=29624 u=admin n=ansible | TASK [Create Directory] *******************************************************************************************************************************************
+2024-10-10 08:44:47,303 p=29624 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:44:47,315 p=29624 u=admin n=ansible | TASK [Upload default.conf] ****************************************************************************************************************************************
+2024-10-10 08:44:48,654 p=29624 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:44:48,664 p=29624 u=admin n=ansible | TASK [Create Nginx Container] *************************************************************************************************************************************
+2024-10-10 08:44:49,692 p=29624 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:44:49,721 p=29624 u=admin n=ansible | PLAY [Installation servers srv-web1, web2] ************************************************************************************************************************
+2024-10-10 08:44:49,725 p=29624 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2024-10-10 08:44:51,669 p=29624 u=admin n=ansible | [WARNING]: Platform linux on host srv-web2 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more
+information.
+
+2024-10-10 08:44:51,670 p=29624 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:44:51,712 p=29624 u=admin n=ansible | [WARNING]: Platform linux on host srv-web1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more
+information.
+
+2024-10-10 08:44:51,712 p=29624 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:44:51,719 p=29624 u=admin n=ansible | TASK [Install Docker] *********************************************************************************************************************************************
+2024-10-10 08:44:54,285 p=29624 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:44:57,613 p=29624 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:44:57,641 p=29624 u=admin n=ansible | TASK [Create Frontend Network] ************************************************************************************************************************************
+2024-10-10 08:44:58,539 p=29624 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:44:58,549 p=29624 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:44:58,557 p=29624 u=admin n=ansible | TASK [Create Backend Network] *************************************************************************************************************************************
+2024-10-10 08:44:59,208 p=29624 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:44:59,237 p=29624 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:44:59,245 p=29624 u=admin n=ansible | TASK [Create Persistent MySQL Volume] *****************************************************************************************************************************
+2024-10-10 08:45:00,129 p=29624 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:45:00,137 p=29624 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:45:00,146 p=29624 u=admin n=ansible | TASK [Create Directory] *******************************************************************************************************************************************
+2024-10-10 08:45:00,630 p=29624 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:45:00,660 p=29624 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:45:00,668 p=29624 u=admin n=ansible | TASK [Create Directory] *******************************************************************************************************************************************
+2024-10-10 08:45:01,151 p=29624 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:45:01,176 p=29624 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:45:01,184 p=29624 u=admin n=ansible | TASK [Uploade index.php] ******************************************************************************************************************************************
+2024-10-10 08:45:02,032 p=29624 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:45:02,057 p=29624 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:45:02,064 p=29624 u=admin n=ansible | TASK [Upload httpd.conf] ******************************************************************************************************************************************
+2024-10-10 08:45:02,914 p=29624 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:45:02,932 p=29624 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:45:02,944 p=29624 u=admin n=ansible | TASK [Create PHP-FPM Container] ***********************************************************************************************************************************
+2024-10-10 08:45:03,665 p=29624 u=admin n=ansible | fatal: [srv-web1]: FAILED! => {"changed": false, "msg": "argument 'networks' is of type <class 'dict'> and we were unable to convert to list: <class 'dict'> cannot be converted to a list"}
+2024-10-10 08:45:03,678 p=29624 u=admin n=ansible | fatal: [srv-web2]: FAILED! => {"changed": false, "msg": "argument 'networks' is of type <class 'dict'> and we were unable to convert to list: <class 'dict'> cannot be converted to a list"}
+2024-10-10 08:45:03,680 p=29624 u=admin n=ansible | PLAY RECAP ********************************************************************************************************************************************************
+2024-10-10 08:45:03,680 p=29624 u=admin n=ansible | srv-lb1                    : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-10 08:45:03,680 p=29624 u=admin n=ansible | srv-web1                   : ok=9    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-10 08:45:03,680 p=29624 u=admin n=ansible | srv-web2                   : ok=9    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-10 08:46:19,530 p=29890 u=admin n=ansible | [WARNING]: While constructing a mapping from /home/admin/ISS_TP3_EFCS/web.yaml, line 76, column 11, found a duplicate dict key (name). Using last defined value
+only.
+
+2024-10-10 08:46:19,587 p=29890 u=admin n=ansible | PLAY [Installation loadbalancer Nginx] ****************************************************************************************************************************
+2024-10-10 08:46:19,597 p=29890 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2024-10-10 08:46:21,821 p=29890 u=admin n=ansible | [WARNING]: Platform linux on host srv-lb1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-10-10 08:46:21,821 p=29890 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:46:21,828 p=29890 u=admin n=ansible | TASK [Install Docker] *********************************************************************************************************************************************
+2024-10-10 08:46:24,461 p=29890 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:46:24,482 p=29890 u=admin n=ansible | TASK [Create Directory] *******************************************************************************************************************************************
+2024-10-10 08:46:25,093 p=29890 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:46:25,105 p=29890 u=admin n=ansible | TASK [Upload default.conf] ****************************************************************************************************************************************
+2024-10-10 08:46:26,434 p=29890 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:46:26,444 p=29890 u=admin n=ansible | TASK [Create Nginx Container] *************************************************************************************************************************************
+2024-10-10 08:46:27,454 p=29890 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:46:27,480 p=29890 u=admin n=ansible | PLAY [Installation servers srv-web1, web2] ************************************************************************************************************************
+2024-10-10 08:46:27,484 p=29890 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2024-10-10 08:46:29,386 p=29890 u=admin n=ansible | [WARNING]: Platform linux on host srv-web1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more
+information.
+
+2024-10-10 08:46:29,386 p=29890 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:46:29,410 p=29890 u=admin n=ansible | [WARNING]: Platform linux on host srv-web2 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more
+information.
+
+2024-10-10 08:46:29,410 p=29890 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:46:29,416 p=29890 u=admin n=ansible | TASK [Install Docker] *********************************************************************************************************************************************
+2024-10-10 08:46:31,975 p=29890 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:46:31,989 p=29890 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:46:32,016 p=29890 u=admin n=ansible | TASK [Create Frontend Network] ************************************************************************************************************************************
+2024-10-10 08:46:32,906 p=29890 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:46:32,913 p=29890 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:46:32,922 p=29890 u=admin n=ansible | TASK [Create Backend Network] *************************************************************************************************************************************
+2024-10-10 08:46:33,577 p=29890 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:46:33,607 p=29890 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:46:33,615 p=29890 u=admin n=ansible | TASK [Create Persistent MySQL Volume] *****************************************************************************************************************************
+2024-10-10 08:46:34,494 p=29890 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:46:34,500 p=29890 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:46:34,510 p=29890 u=admin n=ansible | TASK [Create Directory] *******************************************************************************************************************************************
+2024-10-10 08:46:34,989 p=29890 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:46:35,015 p=29890 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:46:35,022 p=29890 u=admin n=ansible | TASK [Create Directory] *******************************************************************************************************************************************
+2024-10-10 08:46:35,505 p=29890 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:46:35,519 p=29890 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:46:35,526 p=29890 u=admin n=ansible | TASK [Uploade index.php] ******************************************************************************************************************************************
+2024-10-10 08:46:36,364 p=29890 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:46:36,398 p=29890 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:46:36,406 p=29890 u=admin n=ansible | TASK [Upload httpd.conf] ******************************************************************************************************************************************
+2024-10-10 08:46:37,246 p=29890 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:46:37,269 p=29890 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:46:37,277 p=29890 u=admin n=ansible | TASK [Create PHP-FPM Container] ***********************************************************************************************************************************
+2024-10-10 08:46:37,974 p=29890 u=admin n=ansible | fatal: [srv-web1]: FAILED! => {"changed": false, "msg": "argument 'networks' is of type <class 'dict'> and we were unable to convert to list: <class 'dict'> cannot be converted to a list"}
+2024-10-10 08:46:38,006 p=29890 u=admin n=ansible | fatal: [srv-web2]: FAILED! => {"changed": false, "msg": "argument 'networks' is of type <class 'dict'> and we were unable to convert to list: <class 'dict'> cannot be converted to a list"}
+2024-10-10 08:46:38,010 p=29890 u=admin n=ansible | PLAY RECAP ********************************************************************************************************************************************************
+2024-10-10 08:46:38,010 p=29890 u=admin n=ansible | srv-lb1                    : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-10 08:46:38,011 p=29890 u=admin n=ansible | srv-web1                   : ok=9    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-10 08:46:38,011 p=29890 u=admin n=ansible | srv-web2                   : ok=9    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-10 08:50:04,160 p=30174 u=admin n=ansible | PLAY [Installation loadbalancer Nginx] ****************************************************************************************************************************
+2024-10-10 08:50:04,170 p=30174 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2024-10-10 08:50:06,361 p=30174 u=admin n=ansible | [WARNING]: Platform linux on host srv-lb1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-10-10 08:50:06,362 p=30174 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:50:06,370 p=30174 u=admin n=ansible | TASK [Install Docker] *********************************************************************************************************************************************
+2024-10-10 08:50:09,047 p=30174 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:50:09,067 p=30174 u=admin n=ansible | TASK [Create Directory] *******************************************************************************************************************************************
+2024-10-10 08:50:09,690 p=30174 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:50:09,701 p=30174 u=admin n=ansible | TASK [Upload default.conf] ****************************************************************************************************************************************
+2024-10-10 08:50:11,084 p=30174 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:50:11,095 p=30174 u=admin n=ansible | TASK [Create Nginx Container] *************************************************************************************************************************************
+2024-10-10 08:50:12,130 p=30174 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:50:12,159 p=30174 u=admin n=ansible | PLAY [Installation servers srv-web1, web2] ************************************************************************************************************************
+2024-10-10 08:50:12,163 p=30174 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2024-10-10 08:50:14,121 p=30174 u=admin n=ansible | [WARNING]: Platform linux on host srv-web1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more
+information.
+
+2024-10-10 08:50:14,121 p=30174 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:50:14,123 p=30174 u=admin n=ansible | [WARNING]: Platform linux on host srv-web2 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more
+information.
+
+2024-10-10 08:50:14,123 p=30174 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:50:14,132 p=30174 u=admin n=ansible | TASK [Install Docker] *********************************************************************************************************************************************
+2024-10-10 08:50:16,666 p=30174 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:50:16,729 p=30174 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:50:16,762 p=30174 u=admin n=ansible | TASK [Create Frontend Network] ************************************************************************************************************************************
+2024-10-10 08:50:17,656 p=30174 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:50:17,668 p=30174 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:50:17,676 p=30174 u=admin n=ansible | TASK [Create Backend Network] *************************************************************************************************************************************
+2024-10-10 08:50:18,359 p=30174 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:50:18,373 p=30174 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:50:18,382 p=30174 u=admin n=ansible | TASK [Create Persistent MySQL Volume] *****************************************************************************************************************************
+2024-10-10 08:50:19,257 p=30174 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:50:19,267 p=30174 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:50:19,278 p=30174 u=admin n=ansible | TASK [Create Directory] *******************************************************************************************************************************************
+2024-10-10 08:50:19,755 p=30174 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:50:19,794 p=30174 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:50:19,803 p=30174 u=admin n=ansible | TASK [Create Directory] *******************************************************************************************************************************************
+2024-10-10 08:50:20,295 p=30174 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:50:20,304 p=30174 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:50:20,313 p=30174 u=admin n=ansible | TASK [Uploade index.php] ******************************************************************************************************************************************
+2024-10-10 08:50:21,166 p=30174 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:50:21,205 p=30174 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:50:21,219 p=30174 u=admin n=ansible | TASK [Upload httpd.conf] ******************************************************************************************************************************************
+2024-10-10 08:50:22,062 p=30174 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:50:22,096 p=30174 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:50:22,107 p=30174 u=admin n=ansible | TASK [Create PHP-FPM Container] ***********************************************************************************************************************************
+2024-10-10 08:50:22,820 p=30174 u=admin n=ansible | fatal: [srv-web1]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (community.docker.docker_container) module: status. Supported parameters include: api_version, auto_remove, blkio_weight, ca_path, cap_drop, capabilities, cgroup_parent, cgroupns_mode, cleanup, client_cert, client_key, command, command_handling, comparisons, container_default_behavior, cpu_period, cpu_quota, cpu_shares, cpus, cpuset_cpus, cpuset_mems, debug, default_host_ip, detach, device_cgroup_rules, device_read_bps, device_read_iops, device_requests, device_write_bps, device_write_iops, devices, dns_opts, dns_search_domains, dns_servers, docker_host, domainname, entrypoint, env, env_file, etc_hosts, exposed_ports, force_kill, groups, healthcheck, healthy_wait_timeout, hostname, ignore_image, image, image_comparison, image_label_mismatch, image_name_mismatch, init, interactive, ipc_mode, keep_volumes, kernel_memory, kill_signal, labels, links, log_driver, log_options, mac_address, memory, memory_reservation, memory_swap, memory_swappiness, mounts, name, network_mode, networks, networks_cli_compatible, oom_killer, oom_score_adj, output_logs, paused, pid_mode, pids_limit, platform, privileged, publish_all_ports, published_ports, pull, pull_check_mode_behavior, purge_networks, read_only, recreate, removal_wait_timeout, restart, restart_policy, restart_retries, runtime, security_opts, shm_size, ssl_version, state, stop_signal, stop_timeout, storage_opts, sysctls, timeout, tls, tls_hostname, tmpfs, tty, ulimits, use_ssh_client, user, userns_mode, uts, validate_certs, volume_driver, volumes, volumes_from, working_dir (ca_cert, cacert_path, cert_path, docker_api_version, docker_url, expose, exposed, forcekill, key_path, log_opt, ports, tls_ca_cert, tls_client_cert, tls_client_key, tls_verify)."}
+2024-10-10 08:50:22,836 p=30174 u=admin n=ansible | fatal: [srv-web2]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (community.docker.docker_container) module: status. Supported parameters include: api_version, auto_remove, blkio_weight, ca_path, cap_drop, capabilities, cgroup_parent, cgroupns_mode, cleanup, client_cert, client_key, command, command_handling, comparisons, container_default_behavior, cpu_period, cpu_quota, cpu_shares, cpus, cpuset_cpus, cpuset_mems, debug, default_host_ip, detach, device_cgroup_rules, device_read_bps, device_read_iops, device_requests, device_write_bps, device_write_iops, devices, dns_opts, dns_search_domains, dns_servers, docker_host, domainname, entrypoint, env, env_file, etc_hosts, exposed_ports, force_kill, groups, healthcheck, healthy_wait_timeout, hostname, ignore_image, image, image_comparison, image_label_mismatch, image_name_mismatch, init, interactive, ipc_mode, keep_volumes, kernel_memory, kill_signal, labels, links, log_driver, log_options, mac_address, memory, memory_reservation, memory_swap, memory_swappiness, mounts, name, network_mode, networks, networks_cli_compatible, oom_killer, oom_score_adj, output_logs, paused, pid_mode, pids_limit, platform, privileged, publish_all_ports, published_ports, pull, pull_check_mode_behavior, purge_networks, read_only, recreate, removal_wait_timeout, restart, restart_policy, restart_retries, runtime, security_opts, shm_size, ssl_version, state, stop_signal, stop_timeout, storage_opts, sysctls, timeout, tls, tls_hostname, tmpfs, tty, ulimits, use_ssh_client, user, userns_mode, uts, validate_certs, volume_driver, volumes, volumes_from, working_dir (ca_cert, cacert_path, cert_path, docker_api_version, docker_url, expose, exposed, forcekill, key_path, log_opt, ports, tls_ca_cert, tls_client_cert, tls_client_key, tls_verify)."}
+2024-10-10 08:50:22,839 p=30174 u=admin n=ansible | PLAY RECAP ********************************************************************************************************************************************************
+2024-10-10 08:50:22,839 p=30174 u=admin n=ansible | srv-lb1                    : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-10 08:50:22,839 p=30174 u=admin n=ansible | srv-web1                   : ok=9    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-10 08:50:22,839 p=30174 u=admin n=ansible | srv-web2                   : ok=9    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-10 08:52:18,492 p=30448 u=admin n=ansible | PLAY [Installation loadbalancer Nginx] ****************************************************************************************************************************
+2024-10-10 08:52:18,502 p=30448 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2024-10-10 08:52:20,704 p=30448 u=admin n=ansible | [WARNING]: Platform linux on host srv-lb1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-10-10 08:52:20,705 p=30448 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:52:20,711 p=30448 u=admin n=ansible | TASK [Install Docker] *********************************************************************************************************************************************
+2024-10-10 08:52:23,388 p=30448 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:52:23,409 p=30448 u=admin n=ansible | TASK [Create Directory] *******************************************************************************************************************************************
+2024-10-10 08:52:24,022 p=30448 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:52:24,034 p=30448 u=admin n=ansible | TASK [Upload default.conf] ****************************************************************************************************************************************
+2024-10-10 08:52:25,366 p=30448 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:52:25,374 p=30448 u=admin n=ansible | TASK [Create Nginx Container] *************************************************************************************************************************************
+2024-10-10 08:52:26,411 p=30448 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:52:26,437 p=30448 u=admin n=ansible | PLAY [Installation servers srv-web1, web2] ************************************************************************************************************************
+2024-10-10 08:52:26,441 p=30448 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2024-10-10 08:52:28,380 p=30448 u=admin n=ansible | [WARNING]: Platform linux on host srv-web1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more
+information.
+
+2024-10-10 08:52:28,381 p=30448 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:52:28,387 p=30448 u=admin n=ansible | [WARNING]: Platform linux on host srv-web2 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more
+information.
+
+2024-10-10 08:52:28,388 p=30448 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:52:28,398 p=30448 u=admin n=ansible | TASK [Install Docker] *********************************************************************************************************************************************
+2024-10-10 08:52:30,953 p=30448 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:52:31,002 p=30448 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:52:31,033 p=30448 u=admin n=ansible | TASK [Create Frontend Network] ************************************************************************************************************************************
+2024-10-10 08:52:31,930 p=30448 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:52:31,940 p=30448 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:52:31,948 p=30448 u=admin n=ansible | TASK [Create Backend Network] *************************************************************************************************************************************
+2024-10-10 08:52:32,618 p=30448 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:52:32,627 p=30448 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:52:32,636 p=30448 u=admin n=ansible | TASK [Create Persistent MySQL Volume] *****************************************************************************************************************************
+2024-10-10 08:52:33,518 p=30448 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:52:33,524 p=30448 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:52:33,536 p=30448 u=admin n=ansible | TASK [Create Directory] *******************************************************************************************************************************************
+2024-10-10 08:52:34,016 p=30448 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:52:34,028 p=30448 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:52:34,037 p=30448 u=admin n=ansible | TASK [Create Directory] *******************************************************************************************************************************************
+2024-10-10 08:52:34,511 p=30448 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:52:34,543 p=30448 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:52:34,550 p=30448 u=admin n=ansible | TASK [Uploade index.php] ******************************************************************************************************************************************
+2024-10-10 08:52:35,413 p=30448 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:52:35,436 p=30448 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:52:35,444 p=30448 u=admin n=ansible | TASK [Upload httpd.conf] ******************************************************************************************************************************************
+2024-10-10 08:52:36,300 p=30448 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:52:36,335 p=30448 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:52:36,343 p=30448 u=admin n=ansible | TASK [Create PHP-FPM Container] ***********************************************************************************************************************************
+2024-10-10 08:52:37,058 p=30448 u=admin n=ansible | fatal: [srv-web1]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (community.docker.docker_container) module: status. Supported parameters include: api_version, auto_remove, blkio_weight, ca_path, cap_drop, capabilities, cgroup_parent, cgroupns_mode, cleanup, client_cert, client_key, command, command_handling, comparisons, container_default_behavior, cpu_period, cpu_quota, cpu_shares, cpus, cpuset_cpus, cpuset_mems, debug, default_host_ip, detach, device_cgroup_rules, device_read_bps, device_read_iops, device_requests, device_write_bps, device_write_iops, devices, dns_opts, dns_search_domains, dns_servers, docker_host, domainname, entrypoint, env, env_file, etc_hosts, exposed_ports, force_kill, groups, healthcheck, healthy_wait_timeout, hostname, ignore_image, image, image_comparison, image_label_mismatch, image_name_mismatch, init, interactive, ipc_mode, keep_volumes, kernel_memory, kill_signal, labels, links, log_driver, log_options, mac_address, memory, memory_reservation, memory_swap, memory_swappiness, mounts, name, network_mode, networks, networks_cli_compatible, oom_killer, oom_score_adj, output_logs, paused, pid_mode, pids_limit, platform, privileged, publish_all_ports, published_ports, pull, pull_check_mode_behavior, purge_networks, read_only, recreate, removal_wait_timeout, restart, restart_policy, restart_retries, runtime, security_opts, shm_size, ssl_version, state, stop_signal, stop_timeout, storage_opts, sysctls, timeout, tls, tls_hostname, tmpfs, tty, ulimits, use_ssh_client, user, userns_mode, uts, validate_certs, volume_driver, volumes, volumes_from, working_dir (ca_cert, cacert_path, cert_path, docker_api_version, docker_url, expose, exposed, forcekill, key_path, log_opt, ports, tls_ca_cert, tls_client_cert, tls_client_key, tls_verify)."}
+2024-10-10 08:52:37,078 p=30448 u=admin n=ansible | fatal: [srv-web2]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (community.docker.docker_container) module: status. Supported parameters include: api_version, auto_remove, blkio_weight, ca_path, cap_drop, capabilities, cgroup_parent, cgroupns_mode, cleanup, client_cert, client_key, command, command_handling, comparisons, container_default_behavior, cpu_period, cpu_quota, cpu_shares, cpus, cpuset_cpus, cpuset_mems, debug, default_host_ip, detach, device_cgroup_rules, device_read_bps, device_read_iops, device_requests, device_write_bps, device_write_iops, devices, dns_opts, dns_search_domains, dns_servers, docker_host, domainname, entrypoint, env, env_file, etc_hosts, exposed_ports, force_kill, groups, healthcheck, healthy_wait_timeout, hostname, ignore_image, image, image_comparison, image_label_mismatch, image_name_mismatch, init, interactive, ipc_mode, keep_volumes, kernel_memory, kill_signal, labels, links, log_driver, log_options, mac_address, memory, memory_reservation, memory_swap, memory_swappiness, mounts, name, network_mode, networks, networks_cli_compatible, oom_killer, oom_score_adj, output_logs, paused, pid_mode, pids_limit, platform, privileged, publish_all_ports, published_ports, pull, pull_check_mode_behavior, purge_networks, read_only, recreate, removal_wait_timeout, restart, restart_policy, restart_retries, runtime, security_opts, shm_size, ssl_version, state, stop_signal, stop_timeout, storage_opts, sysctls, timeout, tls, tls_hostname, tmpfs, tty, ulimits, use_ssh_client, user, userns_mode, uts, validate_certs, volume_driver, volumes, volumes_from, working_dir (ca_cert, cacert_path, cert_path, docker_api_version, docker_url, expose, exposed, forcekill, key_path, log_opt, ports, tls_ca_cert, tls_client_cert, tls_client_key, tls_verify)."}
+2024-10-10 08:52:37,080 p=30448 u=admin n=ansible | PLAY RECAP ********************************************************************************************************************************************************
+2024-10-10 08:52:37,080 p=30448 u=admin n=ansible | srv-lb1                    : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-10 08:52:37,082 p=30448 u=admin n=ansible | srv-web1                   : ok=9    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-10 08:52:37,082 p=30448 u=admin n=ansible | srv-web2                   : ok=9    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-10 08:53:55,178 p=30710 u=admin n=ansible | ERROR! Decryption failed (no vault secrets were found that could decrypt) on /home/admin/ISS_TP3_EFCS/vars/secret-variables.yaml
+2024-10-10 08:54:05,596 p=30714 u=admin n=ansible | PLAY [Installation loadbalancer Nginx] ****************************************************************************************************************************
+2024-10-10 08:54:05,605 p=30714 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2024-10-10 08:54:07,784 p=30714 u=admin n=ansible | [WARNING]: Platform linux on host srv-lb1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-10-10 08:54:07,784 p=30714 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:54:07,791 p=30714 u=admin n=ansible | TASK [Install Docker] *********************************************************************************************************************************************
+2024-10-10 08:54:10,436 p=30714 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:54:10,458 p=30714 u=admin n=ansible | TASK [Create Directory] *******************************************************************************************************************************************
+2024-10-10 08:54:11,072 p=30714 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:54:11,084 p=30714 u=admin n=ansible | TASK [Upload default.conf] ****************************************************************************************************************************************
+2024-10-10 08:54:12,429 p=30714 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:54:12,440 p=30714 u=admin n=ansible | TASK [Create Nginx Container] *************************************************************************************************************************************
+2024-10-10 08:54:13,486 p=30714 u=admin n=ansible | ok: [srv-lb1]
+2024-10-10 08:54:13,513 p=30714 u=admin n=ansible | PLAY [Installation servers srv-web1, web2] ************************************************************************************************************************
+2024-10-10 08:54:13,516 p=30714 u=admin n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2024-10-10 08:54:15,431 p=30714 u=admin n=ansible | [WARNING]: Platform linux on host srv-web1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more
+information.
+
+2024-10-10 08:54:15,432 p=30714 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:54:15,433 p=30714 u=admin n=ansible | [WARNING]: Platform linux on host srv-web2 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more
+information.
+
+2024-10-10 08:54:15,433 p=30714 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:54:15,441 p=30714 u=admin n=ansible | TASK [Install Docker] *********************************************************************************************************************************************
+2024-10-10 08:54:17,971 p=30714 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:54:17,981 p=30714 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:54:18,009 p=30714 u=admin n=ansible | TASK [Create Frontend Network] ************************************************************************************************************************************
+2024-10-10 08:54:18,891 p=30714 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:54:18,901 p=30714 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:54:18,909 p=30714 u=admin n=ansible | TASK [Create Backend Network] *************************************************************************************************************************************
+2024-10-10 08:54:19,577 p=30714 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:54:19,591 p=30714 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:54:19,599 p=30714 u=admin n=ansible | TASK [Create Persistent MySQL Volume] *****************************************************************************************************************************
+2024-10-10 08:54:20,465 p=30714 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:54:20,472 p=30714 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:54:20,485 p=30714 u=admin n=ansible | TASK [Create Directory] *******************************************************************************************************************************************
+2024-10-10 08:54:20,964 p=30714 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:54:20,992 p=30714 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:54:21,000 p=30714 u=admin n=ansible | TASK [Create Directory] *******************************************************************************************************************************************
+2024-10-10 08:54:21,483 p=30714 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:54:21,496 p=30714 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:54:21,505 p=30714 u=admin n=ansible | TASK [Uploade index.php] ******************************************************************************************************************************************
+2024-10-10 08:54:22,357 p=30714 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:54:22,374 p=30714 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:54:22,384 p=30714 u=admin n=ansible | TASK [Upload httpd.conf] ******************************************************************************************************************************************
+2024-10-10 08:54:23,227 p=30714 u=admin n=ansible | ok: [srv-web1]
+2024-10-10 08:54:23,265 p=30714 u=admin n=ansible | ok: [srv-web2]
+2024-10-10 08:54:23,275 p=30714 u=admin n=ansible | TASK [Create PHP-FPM Container] ***********************************************************************************************************************************
+2024-10-10 08:54:27,121 p=30714 u=admin n=ansible | changed: [srv-web1]
+2024-10-10 08:54:27,223 p=30714 u=admin n=ansible | changed: [srv-web2]
+2024-10-10 08:54:27,230 p=30714 u=admin n=ansible | TASK [Create Apache Container] ************************************************************************************************************************************
+2024-10-10 08:54:31,407 p=30714 u=admin n=ansible | changed: [srv-web1]
+2024-10-10 08:54:32,036 p=30714 u=admin n=ansible | changed: [srv-web2]
+2024-10-10 08:54:32,045 p=30714 u=admin n=ansible | TASK [Create MySQL Container] *************************************************************************************************************************************
+2024-10-10 08:54:32,749 p=30714 u=admin n=ansible | fatal: [srv-web1]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (community.docker.docker_container) module: environment. Supported parameters include: api_version, auto_remove, blkio_weight, ca_path, cap_drop, capabilities, cgroup_parent, cgroupns_mode, cleanup, client_cert, client_key, command, command_handling, comparisons, container_default_behavior, cpu_period, cpu_quota, cpu_shares, cpus, cpuset_cpus, cpuset_mems, debug, default_host_ip, detach, device_cgroup_rules, device_read_bps, device_read_iops, device_requests, device_write_bps, device_write_iops, devices, dns_opts, dns_search_domains, dns_servers, docker_host, domainname, entrypoint, env, env_file, etc_hosts, exposed_ports, force_kill, groups, healthcheck, healthy_wait_timeout, hostname, ignore_image, image, image_comparison, image_label_mismatch, image_name_mismatch, init, interactive, ipc_mode, keep_volumes, kernel_memory, kill_signal, labels, links, log_driver, log_options, mac_address, memory, memory_reservation, memory_swap, memory_swappiness, mounts, name, network_mode, networks, networks_cli_compatible, oom_killer, oom_score_adj, output_logs, paused, pid_mode, pids_limit, platform, privileged, publish_all_ports, published_ports, pull, pull_check_mode_behavior, purge_networks, read_only, recreate, removal_wait_timeout, restart, restart_policy, restart_retries, runtime, security_opts, shm_size, ssl_version, state, stop_signal, stop_timeout, storage_opts, sysctls, timeout, tls, tls_hostname, tmpfs, tty, ulimits, use_ssh_client, user, userns_mode, uts, validate_certs, volume_driver, volumes, volumes_from, working_dir (ca_cert, cacert_path, cert_path, docker_api_version, docker_url, expose, exposed, forcekill, key_path, log_opt, ports, tls_ca_cert, tls_client_cert, tls_client_key, tls_verify)."}
+2024-10-10 08:54:32,834 p=30714 u=admin n=ansible | fatal: [srv-web2]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (community.docker.docker_container) module: environment. Supported parameters include: api_version, auto_remove, blkio_weight, ca_path, cap_drop, capabilities, cgroup_parent, cgroupns_mode, cleanup, client_cert, client_key, command, command_handling, comparisons, container_default_behavior, cpu_period, cpu_quota, cpu_shares, cpus, cpuset_cpus, cpuset_mems, debug, default_host_ip, detach, device_cgroup_rules, device_read_bps, device_read_iops, device_requests, device_write_bps, device_write_iops, devices, dns_opts, dns_search_domains, dns_servers, docker_host, domainname, entrypoint, env, env_file, etc_hosts, exposed_ports, force_kill, groups, healthcheck, healthy_wait_timeout, hostname, ignore_image, image, image_comparison, image_label_mismatch, image_name_mismatch, init, interactive, ipc_mode, keep_volumes, kernel_memory, kill_signal, labels, links, log_driver, log_options, mac_address, memory, memory_reservation, memory_swap, memory_swappiness, mounts, name, network_mode, networks, networks_cli_compatible, oom_killer, oom_score_adj, output_logs, paused, pid_mode, pids_limit, platform, privileged, publish_all_ports, published_ports, pull, pull_check_mode_behavior, purge_networks, read_only, recreate, removal_wait_timeout, restart, restart_policy, restart_retries, runtime, security_opts, shm_size, ssl_version, state, stop_signal, stop_timeout, storage_opts, sysctls, timeout, tls, tls_hostname, tmpfs, tty, ulimits, use_ssh_client, user, userns_mode, uts, validate_certs, volume_driver, volumes, volumes_from, working_dir (ca_cert, cacert_path, cert_path, docker_api_version, docker_url, expose, exposed, forcekill, key_path, log_opt, ports, tls_ca_cert, tls_client_cert, tls_client_key, tls_verify)."}
+2024-10-10 08:54:32,836 p=30714 u=admin n=ansible | PLAY RECAP ********************************************************************************************************************************************************
+2024-10-10 08:54:32,836 p=30714 u=admin n=ansible | srv-lb1                    : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-10 08:54:32,837 p=30714 u=admin n=ansible | srv-web1                   : ok=11   changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-10 08:54:32,837 p=30714 u=admin n=ansible | srv-web2                   : ok=11   changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
