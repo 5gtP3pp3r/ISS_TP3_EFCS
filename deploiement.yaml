@@ -12,10 +12,19 @@
 
   tasks:
 
-    - name: Upload httpd.conf
+    - name: Create Directory
+      ansible.builtin.file:
+        path: /home/admin/NginxConf
+        state: directory
+        owner: admin
+        group: admin
+        mode: 0755
+
+    - name: Upload default.conf
       copy:
         src: ./NginxConf/default.conf
         dest: /home/admin/NginxConf/default.conf
+        mode: 0755
 
     - name: Create Nginx Container
       community.docker.docker_container:
@@ -54,10 +63,27 @@
       community.docker.docker_volume:
         name: mysql_data
 
+    - name: Create Directory
+      ansible.builtin.file:
+        path: /home/admin/html
+        state: directory
+        owner: admin
+        group: admin
+        mode: 0755
+
+    - name: Create Directory
+      ansible.builtin.file:
+        path: /home/admin/HttpConf
+        state: directory
+        owner: admin
+        group: admin
+        mode: 0755
+
     - name: Uploade index.php
       copy:
         src: ./html/index.php
         dest: /home/admin/html/index.php
+        mode: 0755
 
     - name: Upload httpd.conf
       copy:
