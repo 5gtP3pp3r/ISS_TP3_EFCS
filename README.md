@@ -12,6 +12,7 @@ Le site n'est pas fonctionnel, mais tout le travail pertinant est présent et co
 références visuelles pour la video:
 
 ```php
+
 <h1>Je te test!</h1>
 <h4>Tentative d'affichage des ip du conteneur PHP-FPM et de la VM!</h4>
 
@@ -23,9 +24,11 @@ echo "L'adresse IP du conteneur est : " . $_SERVER['SERVER_ADDR'] . "<br>";
 $ipExterne = file_get_contents('http://ipecho.net/plain');
 echo "L'adresse IP externe de la VM est : " . $ipExterne;
 ?>
+
 ```
 
 ```terminal
+
 upstream srv-lb1-servers {
         server srv-web1 max_fails=2;
         server srv-web2 max_fails=2;
@@ -48,15 +51,17 @@ server {
 ```
 
 ```yaml
+
 [defaults]
 inventory = ./inventaire.yaml
 remote_user = admin
 retry_files_enabled = False
 log_path = ./.traces_d_ansible
+
 ```
 
 ```yaml
-  GNU nano 7.2                                                             inventaire.yaml                                                                       
+                           
 all:
   vars:
     ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
@@ -76,16 +81,20 @@ prod:
     webservers:
 #  vars:
 #    env: production # Pas sur de celle là et de son utilité
+
 ```
 
 ```yaml
+
 - name: Configure LoadBalancer
   ansible.builtin.import_playbook: loadbalancer.yaml
 - name: Configure Web Servers
   ansible.builtin.import_playbook: web.yaml
+
 ```
 
 ```yaml
+
 - name: "Installation loadbalancer Nginx "
   hosts: lbservers
   become: true
@@ -123,9 +132,11 @@ prod:
         volumes:
           - /home/admin/NginxConf/default.conf:/usr/share/nginx/conf.d/default.conf:ro
         state: present
+
 ```
 
 ```yaml
+
 - name: "Installation servers srv-web1, web2"
   hosts: webservers
   become: true
@@ -218,6 +229,7 @@ prod:
         networks:
           - backend
         state: present
+
 ```
 
 
